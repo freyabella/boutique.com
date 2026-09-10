@@ -285,10 +285,6 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .swatches{display:flex;gap:5px;margin-top:11px}
 .sw{width:14px;height:14px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 1px var(--line)}
 
-/* Skeletons */
-.skeleton{background:linear-gradient(90deg,var(--bg-alt) 25%,#FFE9D4 50%,var(--bg-alt) 75%);background-size:200% 100%;animation:skel 1.5s infinite;border-radius:var(--radius);aspect-ratio:3/4}
-@keyframes skel{to{background-position:-200% 0}}
-
 .empty{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--muted)}
 .empty svg{width:56px;height:56px;color:var(--line);margin-bottom:18px;stroke-width:1}
 .empty h3{font-size:1.3rem;color:var(--ink);margin-bottom:8px}
@@ -296,7 +292,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 /* ============ COMBOS ============ */
 .combos{padding:clamp(64px,8vw,110px) 0;background:linear-gradient(180deg,#FFFBF6,#FFF1E0);border-block:1px solid var(--line)}
 .combos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.combo{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);position:relative;transition:all .5s var(--ease-out);display:flex;flex-direction:column}
+.combo{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);position:relative;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),border-color .5s;display:flex;flex-direction:column;animation:fadeUp .6s var(--ease-out) both}
 .combo:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:transparent}
 .combo-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--bg-alt)}
 .combo-media img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease-out)}
@@ -471,7 +467,6 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .drawer-body{flex:1;overflow-y:auto;padding:18px 26px}
 .drawer-foot{border-top:1px solid var(--line);padding:20px 26px 24px;background:var(--surface);box-shadow:0 -10px 30px -24px rgba(60,30,0,.5)}
 
-/* Free shipping progress */
 .ship-progress{margin-bottom:14px}
 .ship-progress-text{font-size:.75rem;color:var(--ink-soft);margin-bottom:8px;font-weight:500;display:flex;align-items:center;gap:7px}
 .ship-progress-text b{color:var(--plum);font-weight:700}
@@ -515,9 +510,8 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .modal-close svg{width:19px;height:19px;stroke-width:1.7}
 
 .pv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:100%}
-.pv-media{background:var(--bg-alt);position:relative;overflow:hidden;min-height:420px;cursor:zoom-in}
-.pv-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .6s var(--ease-out)}
-.pv-media.zoomed img{transform:scale(1.8);cursor:zoom-out}
+.pv-media{background:var(--bg-alt);position:relative;overflow:hidden;min-height:420px}
+.pv-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 .pv-info{padding:clamp(22px,4vw,44px);min-width:0;overflow-wrap:break-word}
 .pv-info .card-cat{margin-bottom:9px}
 .pv-info h2{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px;overflow-wrap:break-word;font-weight:600}
@@ -644,13 +638,6 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .footer-bottom{flex-direction:column;text-align:center;align-items:center}
   .drawer{width:100%}
   .form-grid{grid-template-columns:1fr}
-  .modal{padding:0;align-items:stretch}
-  .modal-card{border-radius:0;width:100%;max-width:100%;height:100dvh;max-height:100dvh;min-height:100dvh}
-  .pv-media{min-height:0;height:40vh;max-height:340px}
-  .pv-info{padding:22px 20px 32px}
-  .pv-info h2{font-size:1.35rem}
-  .pv-price .now{font-size:1.45rem}
-  .opt{padding:8px 14px;font-size:.75rem;min-width:40px}
   .wa-float{width:52px;height:52px;bottom:80px;right:16px}
   .wa-float svg{width:25px;height:25px}
   .wa-float .tip{display:none}
@@ -659,7 +646,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .combos-grid{grid-template-columns:1fr}
 }
 
-/* ============ MÓVIL ============ */
+/* ============ MÓVIL: MODAL COMPACTO ============ */
 html.is-mobile body{-webkit-overflow-scrolling:touch;padding-bottom:72px}
 html.is-mobile .bottom-nav{display:block}
 html.is-mobile .header-inner{height:62px;gap:14px}
@@ -724,15 +711,33 @@ html.is-mobile .footer{padding:44px 0 0}
 html.is-mobile .footer-grid{grid-template-columns:1fr;gap:26px;padding-bottom:36px}
 html.is-mobile .footer-bottom{flex-direction:column;text-align:center;align-items:center;gap:10px}
 html.is-mobile .socials a{width:44px;height:44px}
-html.is-mobile .modal{padding:0;align-items:stretch}
-html.is-mobile .modal-card{border-radius:0;width:100%;max-width:100%;height:100dvh;max-height:100dvh;min-height:100dvh}
-html.is-mobile .pv-media{height:42vh;max-height:360px}
-html.is-mobile .pv-info{padding:20px 18px 28px}
-html.is-mobile .pv-info h2{font-size:1.3rem}
-html.is-mobile .pv-price .now{font-size:1.4rem}
-html.is-mobile .pv-actions{flex-direction:column;gap:9px}
-html.is-mobile .pv-actions .btn{width:100%;padding:14px 20px;font-size:.74rem}
-html.is-mobile .admin-card{max-width:100%;padding:22px 18px 32px}
+
+/* MODAL MÓVIL COMPACTO — clave */
+html.is-mobile .modal{padding:14px 12px 82px;align-items:center}
+html.is-mobile .modal-card{
+  border-radius:22px;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:calc(100dvh - 96px);
+  min-height:0;
+  overflow-y:auto;
+}
+html.is-mobile .pv-media{height:190px;max-height:28vh;min-height:0}
+html.is-mobile .pv-info{padding:18px 18px 22px}
+html.is-mobile .pv-info h2{font-size:1.22rem;margin-bottom:6px}
+html.is-mobile .pv-rating{margin-bottom:12px;font-size:.72rem}
+html.is-mobile .pv-price{margin-bottom:14px}
+html.is-mobile .pv-price .now{font-size:1.35rem}
+html.is-mobile .pv-desc{font-size:.83rem;margin-bottom:16px}
+html.is-mobile .opt-group{margin-bottom:14px}
+html.is-mobile .pv-actions{flex-direction:row;gap:8px;margin-top:16px}
+html.is-mobile .pv-actions .btn{flex:1;min-width:0;padding:13px 10px;font-size:.66rem;letter-spacing:.08em;white-space:nowrap}
+html.is-mobile .pv-meta{margin-top:16px;padding-top:14px;font-size:.72rem}
+html.is-mobile .modal-close{top:12px;right:12px;width:36px;height:36px;background:rgba(255,255,255,.95)}
+html.is-mobile .modal-close svg{width:16px;height:16px}
+
+html.is-mobile .admin-card{max-width:100%;padding:22px 18px 32px;border-radius:22px}
 html.is-mobile .form-grid{grid-template-columns:1fr;gap:14px}
 html.is-mobile .field input,html.is-mobile .field select,html.is-mobile .field textarea{font-size:16px}
 html.is-mobile *{-webkit-tap-highlight-color:rgba(255,122,0,.12)}
@@ -746,7 +751,6 @@ html.is-tablet .cosmo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 html.is-tablet .pv-actions .btn{flex:1 1 240px}
 
 @supports(height:100dvh){
-  html.is-mobile .modal-card{height:100dvh;max-height:100dvh;min-height:100dvh}
   html.is-mobile .drawer{height:100dvh}
 }
 </style>
@@ -1384,11 +1388,10 @@ const PRODUCTOS_DEMO = [
   {id:'c04',nombre:'Paleta Sombras Nude',categoria:'Cosméticos',precio:240000,precioAntes:320000,badge:'Oferta',img:U('1512496015851-a90fb38ba796'),desc:'12 tonos neutros altamente pigmentados.',tallas:[],colores:[],stock:11,rating:4.6,orden:13}
 ];
 
-/* COMBOS */
 const COMBOS_DEMO = [
-  {id:'combo1',nombre:'Combo Básicos x5',tag:'¡Ahorrás ₲15.000!',desc:'5 básicos infaltables: top, remera, crop, short y body. Armá tu guardarropa completo.',items:['Top','Remera','Crop','Short','Body'],precio:185000,precioAntes:200000,img:U('1483985988355-763728e1935b')},
-  {id:'combo2',nombre:'Combo Bijou Deluxe',tag:'Pack x6',desc:'6 piezas de bijouterie con baño dorado. Aretes, cadenas, pulseras y anillos.',items:['Aretes','Cadena','Pulsera','Anillo','Set','Collar'],precio:75000,precioAntes:95000,img:U('1515562141207-7a88fb7ce338')},
-  {id:'combo3',nombre:'Combo Medias x10',tag:'Pack mayorista',desc:'10 pares surtidos: invisibles, deportivas, soquetes y caña alta.',items:['Soquetes','Deportivas','Invisibles','Rayadas'],precio:130000,precioAntes:170000,img:U('1586350977771-b3b0abd50c82')}
+  {id:'combo1',nombre:'Combo Básicos x5',tag:'¡Ahorrás ₲15.000!',desc:'5 básicos infaltables: top, remera, crop, short y body. Armá tu guardarropa completo.',items:['Top','Remera','Crop','Short','Body'],precio:185000,precioAntes:200000,img:'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80'},
+  {id:'combo2',nombre:'Combo Bijou Deluxe',tag:'Pack x6',desc:'6 piezas de bijouterie con baño dorado. Aretes, cadenas, pulseras y anillos.',items:['Aretes','Cadena','Pulsera','Anillo','Set','Collar'],precio:75000,precioAntes:95000,img:'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80'},
+  {id:'combo3',nombre:'Combo Medias x10',tag:'Pack mayorista',desc:'10 pares surtidos: invisibles, deportivas, soquetes y caña alta.',items:['Soquetes','Deportivas','Invisibles','Rayadas'],precio:130000,precioAntes:170000,img:'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&w=900&q=80'}
 ];
 
 let productos=[], combos=[];
@@ -1592,12 +1595,12 @@ function renderCosmeticos(){
   }).join('');
 }
 
+/* COMBOS — SIN .reveal para que se vean siempre */
 function renderCombos(){
   const cont = $('#combosGrid');
   if(!cont || !combos.length) return;
   cont.innerHTML = combos.map((c,i)=>{
-    const ahorro = c.precioAntes ? c.precioAntes-c.precio : 0;
-    return `<article class="combo reveal" style="transition-delay:${i*80}ms">
+    return `<article class="combo" style="animation-delay:${i*90}ms">
       <div class="combo-media">
         <img src="${c.img}" data-ph="${placeholder(c.nombre,'Boutique')}" alt="${c.nombre}" loading="lazy">
         <span class="combo-tag">${c.tag}</span>
@@ -1769,7 +1772,7 @@ $('#btnClearCart').addEventListener('click',()=>{
   carrito=[]; guardarCarrito(); toastSimple('Bolsa vaciada');
 });
 
-/* FAVORITOS: abre catálogo filtrado */
+/* FAVORITOS */
 function mostrarFavoritos(){
   if(!favoritos.length){ toastSimple('Aún no tenés favoritos 🧡'); return; }
   filtro='Todos'; busqueda='';
@@ -1783,7 +1786,7 @@ function mostrarFavoritos(){
 }
 $('#btnFavs').addEventListener('click', mostrarFavoritos);
 
-/* PRODUCTO MODAL */
+/* PRODUCTO MODAL — SIN ZOOM */
 function abrirProducto(id){
   const p = productos.find(x=>x.id===id);
   if(!p) return;
@@ -1803,7 +1806,7 @@ function renderProducto(){
   const tagCat = p.categoria==='Importados'?'🇺🇸 Importado USA':p.categoria;
 
   $('#pvContent').innerHTML = `
-    <div class="pv-media" id="pvMedia">
+    <div class="pv-media">
       <img src="${p.img||placeholder(p.nombre,p.categoria)}" data-ph="${placeholder(p.nombre,p.categoria)}" alt="${p.nombre}">
     </div>
     <div class="pv-info">
@@ -1843,10 +1846,6 @@ function renderProducto(){
       </div>
     </div>`;
 
-  const media = $('#pvMedia');
-  if(media){
-    media.addEventListener('click',()=>media.classList.toggle('zoomed'));
-  }
   $('#optsTalla')?.addEventListener('click',e=>{
     const b = e.target.closest('[data-talla]');
     if(!b) return;
@@ -2084,7 +2083,7 @@ const obs = new IntersectionObserver(entries=>{
 },{rootMargin:'-40% 0px -55% 0px'});
 sections.forEach(s=>{ const el=document.getElementById(s); if(el) obs.observe(el); });
 
-/* REVEAL */
+/* REVEAL — solo para elementos que ya están en el DOM estático */
 const revealObs = new IntersectionObserver(entries=>{
   entries.forEach(ent=>{
     if(ent.isIntersecting){ ent.target.classList.add('in'); revealObs.unobserve(ent.target); }
