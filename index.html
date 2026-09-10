@@ -54,11 +54,54 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 ::-webkit-scrollbar-thumb{background:#D6C9C0;border-radius:10px;border:2px solid var(--bg-alt)}
 ::-webkit-scrollbar-thumb:hover{background:var(--plum-soft)}
 
-/* TOPBAR */
-.topbar{background:var(--plum-deep);color:#EADFE4;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 0;text-align:center;font-weight:400;overflow:hidden;position:relative;z-index:60}
-.topbar .track{display:flex;gap:60px;justify-content:center;flex-wrap:wrap}
-.topbar span{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
-.topbar .dot{width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block}
+/* TOPBAR — CORREGIDO */
+.topbar{
+  background:var(--plum-deep);
+  color:#EADFE4;
+  font-size:.74rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:10px 0;
+  text-align:center;
+  font-weight:400;
+  position:relative;
+  z-index:60;
+  overflow:hidden;
+}
+.topbar .track{
+  display:flex;
+  gap:20px;
+  justify-content:flex-start;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:0 20px;
+  -webkit-overflow-scrolling:touch;
+}
+.topbar .track::-webkit-scrollbar{display:none}
+.topbar span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.topbar .dot{
+  width:4px;
+  height:4px;
+  background:var(--gold);
+  border-radius:50%;
+  display:inline-block;
+  flex-shrink:0;
+}
+@media (min-width:768px){
+  .topbar .track{
+    justify-content:center;
+    gap:60px;
+    overflow-x:visible;
+  }
+}
 
 /* HEADER */
 .header{position:sticky;top:0;z-index:50;background:rgba(250,247,244,.82);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border-bottom:1px solid transparent;transition:border-color .35s var(--ease),background .35s var(--ease),box-shadow .35s var(--ease)}
@@ -92,7 +135,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .cart-count.show{transform:scale(1)}
 .burger{display:none}
 
-/* ================= HERO NUEVO ================= */
+/* HERO */
 .hero{position:relative;min-height:min(92vh,860px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--plum-deep);isolation:isolate}
 .hero-media{position:absolute;inset:0;z-index:1}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:heroZoom 22s ease-in-out infinite alternate}
@@ -126,7 +169,6 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .btn-block{width:100%}
 .btn:disabled{opacity:.45;pointer-events:none}
 
-/* Barra inferior del hero */
 .hero-bottom{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.12);background:rgba(20,12,18,.42);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4)}
 .hero-bottom-inner{display:flex;justify-content:space-between;align-items:center;gap:26px;padding:22px 22px;flex-wrap:wrap;max-width:calc(var(--maxw) + 44px);margin-inline:auto}
 .hero-stats{display:flex;gap:clamp(22px,3vw,46px);flex-wrap:wrap}
@@ -234,7 +276,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .import-cta p{color:#5A6270;font-size:.95rem;margin-bottom:22px;max-width:56ch;margin-inline:auto;position:relative;z-index:2}
 .import-cta .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
 
-/* ========== ECONÓMICOS ========== */
+/* ECONÓMICOS */
 .eco{
   background:linear-gradient(180deg,#FFF8F2 0%,#FDF3EA 100%);
   position:relative;overflow:hidden;
@@ -534,7 +576,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 
 <main>
 
-<!-- ============ HERO NUEVO EDITORIAL ============ -->
+<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-media">
     <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=80"
@@ -627,7 +669,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   </div>
 </section>
 
-<!-- ================= ECONÓMICOS ================= -->
+<!-- ECONÓMICOS -->
 <section class="eco" id="economicos">
   <div class="container">
     <div class="section-head">
@@ -649,7 +691,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   </div>
 </section>
 
-<!-- ================= IMPORT USA ================= -->
+<!-- IMPORT USA -->
 <section class="imports" id="importados">
   <div class="container">
     <div class="section-head">
@@ -1026,7 +1068,6 @@ document.addEventListener('error', e => {
 /* ============ CATÁLOGO DEMO COMPLETO ============ */
 const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=80`;
 const PRODUCTOS_DEMO = [
-  /* ============ ROPA ELEGANTE ============ */
   { id:'p01', nombre:'Vestido Aurora', categoria:'Ropa', precio:350000, precioAntes:450000, badge:'Oferta',
     img:U('1595777457583-95e059d581b8'), desc:'Vestido midi en satén fluido con caída elegante.',
     tallas:['XS','S','M','L','XL'], colores:['#1C1619','#8B5A6B','#C2A26B'], stock:14, rating:4.8, orden:1 },
@@ -1037,7 +1078,6 @@ const PRODUCTOS_DEMO = [
     img:U('1490481651871-ab68de25d43d'), desc:'Conjunto de lino 100% natural: top y pantalón.',
     tallas:['S','M','L','XL'], colores:['#E8DCC4','#FFFFFF','#1C1619'], stock:9, rating:4.9, orden:3 },
 
-  /* ============ ROPA ECONÓMICA (30-60K) ============ */
   { id:'r01', nombre:'Top Básico Algodón', categoria:'Ropa', precio:35000, precioAntes:45000, badge:'Oferta',
     img:U('1564257631407-4deb1f99d992'), desc:'Top básico de algodón peinado. Escote redondo, fit ajustado.',
     tallas:['XS','S','M','L'], colores:['#FFFFFF','#1C1619','#EBD8D8','#8A8189'], stock:30, rating:4.5, orden:40, tag:'económico' },
@@ -1063,7 +1103,6 @@ const PRODUCTOS_DEMO = [
     img:U('1552902865-b72c031ac5ea'), desc:'Pantalón jogger con puños elásticos y cordón. Cómodo y estiloso.',
     tallas:['S','M','L','XL'], colores:['#1C1619','#8A8189','#4A2B3D'], stock:16, rating:4.6, orden:47, tag:'económico' },
 
-  /* ============ BOUTIQUE ============ */
   { id:'p06', nombre:'Bolso Artemis', categoria:'Boutique', precio:450000, badge:'Bestseller',
     img:U('1584917865442-de89df76afd3'), desc:'Bolso estructurado en cuero vegano con herrajes dorados.',
     tallas:[], colores:['#4A2B3D','#1C1619','#C2A26B'], stock:8, rating:4.9, orden:6 },
@@ -1071,7 +1110,6 @@ const PRODUCTOS_DEMO = [
     img:U('1601924994987-69e26d50dc26'), desc:'Pañuelo de seda con estampado floral exclusivo.',
     tallas:[], colores:['#C98F8F','#C2A26B','#4A2B3D'], stock:30, rating:4.4, orden:8 },
 
-  /* ============ 🇺🇸 IMPORTADOS ============ */
   { id:'i01', nombre:'Hoodie Oversize Urban', categoria:'Importados', precio:85000, precioAntes:120000, badge:'Nuevo',
     img:U('1556821840-3a63f95609a7'), desc:'Buzo con capucha oversize, tela gruesa frisada. Importado.',
     tallas:['S','M','L','XL'], colores:['#1C1619','#8A8189','#3C5A99'], stock:18, rating:4.7, orden:20, tag:'recién llegado' },
@@ -1091,7 +1129,6 @@ const PRODUCTOS_DEMO = [
     img:U('1620799140408-edc6dcb6d633'), desc:'Buzo con canguro y capucha, tela fleece interior.',
     tallas:['S','M','L','XL'], colores:['#8A8189','#1C1619','#4A2B3D'], stock:14, rating:4.8, orden:26, tag:'top ventas' },
 
-  /* ============ 🧦 MEDIAS (desde 15K) ============ */
   { id:'m01', nombre:'Medias de Encaje / Red', categoria:'Medias', precio:15000, badge:'Oferta',
     img:U('1583241800698-e8ab01c85b6a'), desc:'Medias de encaje con diseño delicado. Perfectas para looks especiales.',
     tallas:['Único'], colores:['#1C1619','#EBD8D8'], stock:40, rating:4.7, orden:50, tag:'desde ₲15.000' },
@@ -1111,7 +1148,6 @@ const PRODUCTOS_DEMO = [
     img:U('1618354691373-d851c5c3a990'), desc:'Medias térmicas con interior afelpado. Calor garantizado.',
     tallas:['Único'], colores:['#1C1619','#4A2B3D','#8A8189'], stock:20, rating:4.7, orden:55, tag:'invierno' },
 
-  /* ============ 💎 BIJOUTERIE (desde 5K) ============ */
   { id:'b01', nombre:'Anillo Ajustable Dije', categoria:'Bijouterie', precio:5000, badge:'Oferta',
     img:U('1603561591411-07134e71a2a9'), desc:'Anillo ajustable con dije minimalista. Baño dorado antialérgico.',
     tallas:['Ajustable'], colores:['#C2A26B','#C0C0C0'], stock:50, rating:4.5, orden:60, tag:'desde ₲5.000' },
@@ -1137,7 +1173,6 @@ const PRODUCTOS_DEMO = [
     img:U('1596944924616-7b38e7cfac36'), desc:'Collar de perlas falsas con cierre dorado. Elegancia atemporal.',
     tallas:['40cm'], colores:['#FFFFFF','#EBD8D8'], stock:26, rating:4.8, orden:67 },
 
-  /* ============ COSMÉTICOS ============ */
   { id:'c01', nombre:'Sérum Vitamina C', categoria:'Cosméticos', precio:180000, badge:'Bestseller',
     img:U('1620916566398-39f1143ab7be'), desc:'Sérum concentrado al 15% de vitamina C. 30 ml.',
     tallas:[], colores:[], stock:22, rating:4.9, orden:10 },
@@ -1152,7 +1187,6 @@ const PRODUCTOS_DEMO = [
     tallas:[], colores:[], stock:11, rating:4.6, orden:13 }
 ];
 
-/* Estado */
 let productos = [];
 let carrito   = LS.get('cart', []);
 let favoritos = LS.get('favs', []);
@@ -1190,7 +1224,6 @@ function renderAll() {
   renderEconomicos();
 }
 
-/* ============ CATÁLOGO ============ */
 const CATEGORIAS = ['Todos','Ropa','Boutique','Importados','Medias','Bijouterie','Cosméticos','Accesorios'];
 
 function renderChips() {
@@ -1292,7 +1325,6 @@ function renderCatalogo() {
   ).join('');
 }
 
-/* ============ IMPORTADOS ============ */
 function renderImportados() {
   const list = productos.filter(p => p.categoria === 'Importados');
   const cont = $('#importGrid');
@@ -1334,9 +1366,7 @@ function renderImportados() {
   }).join('');
 }
 
-/* ============ ECONÓMICOS (Medias + Bijouterie + Ropa barata) ============ */
 function renderEconomicos() {
-  // Filtra: ropa ≤ 60K + todas las medias + toda la bijouterie
   const list = productos.filter(p =>
     p.categoria === 'Medias' ||
     p.categoria === 'Bijouterie' ||
@@ -1388,7 +1418,6 @@ function renderEconomicos() {
   }).join('');
 }
 
-/* ============ COSMÉTICOS ============ */
 function renderCosmeticos() {
   const list = productos.filter(p => p.categoria === 'Cosméticos');
   const cont = $('#cosmoGrid');
@@ -1425,7 +1454,6 @@ function renderCosmeticos() {
   }).join('');
 }
 
-/* ============ EVENTOS ============ */
 document.addEventListener('click', e => {
   const fav = e.target.closest('[data-fav]');
   if (fav) { toggleFav(fav.dataset.fav); return; }
@@ -1445,7 +1473,6 @@ function toggleFav(id) {
   renderAll();
 }
 
-/* ============ CARRITO ============ */
 function guardarCarrito() { LS.set('cart', carrito); actualizarUI(); }
 
 function añadirAlCarrito(prod, { talla = null, color = null, cant = 1 } = {}) {
@@ -1601,7 +1628,6 @@ $('#btnClearCart').addEventListener('click', () => {
   toast('Bolsa vaciada');
 });
 
-/* ============ VISTA RÁPIDA ============ */
 function abrirProducto(id) {
   const p = productos.find(x => x.id === id);
   if (!p) return;
@@ -1718,7 +1744,6 @@ ${selTalla ? `📏 Talla: ${selTalla}\n` : ''}🔢 Cantidad: ${selCant}
   });
 }
 
-/* ============ WHATSAPP ============ */
 function abrirWhatsApp(mensaje) {
   window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
 }
@@ -1794,7 +1819,6 @@ $('#waCosmo').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent
 $('#waImport').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent('¡Hola Freya Bella! 🇺🇸 Quiero ver el catálogo completo de ropa importada de USA. ¿Me lo pueden enviar?')}`;
 $('#waEco').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent('¡Hola Freya Bella! 💕 Quiero ver los combos económicos de medias, bijouterie y básicos. ¿Me comparten precios al por mayor?')}`;
 
-/* ============ MODALES ============ */
 function abrirModal(sel) {
   $(sel).classList.add('show');
   $('#overlay').classList.add('show');
@@ -1819,7 +1843,6 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* ============ PANEL ADMIN ============ */
 $('#btnAdmin').addEventListener('click', () => {
   const pass = prompt('🔒 Contraseña del panel:');
   if (pass === null) return;
@@ -1914,7 +1937,6 @@ $('#adminForm').addEventListener('submit', async e => {
   setTimeout(() => cerrarModal('#adminModal'), 1200);
 });
 
-/* ============ BÚSQUEDA / HEADER ============ */
 let searchTimer;
 $('#searchInput').addEventListener('input', e => {
   clearTimeout(searchTimer);
@@ -1939,7 +1961,6 @@ $('#btnBurger').addEventListener('click', () => {
   if (map[dest]) document.querySelector(map[dest]).scrollIntoView({ behavior: 'smooth' });
 });
 
-/* ============ TOASTS ============ */
 function toast(txt) {
   const el = document.createElement('div');
   el.className = 'toast';
@@ -1951,7 +1972,6 @@ function toast(txt) {
   }, 2400);
 }
 
-/* ============ ARRANQUE ============ */
 (async function init() {
   actualizarUI();
   productos = LS.get('productos', null) || structuredClone(PRODUCTOS_DEMO);
