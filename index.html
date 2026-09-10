@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Freya Bella · Boutique & Cosméticos · Paraguay</title>
-<meta name="description" content="Freya Bella — Boutique, cosméticos y ropa importada de USA en Paraguay. Envío gratis desde 50.000 Gs.">
+<meta name="description" content="Freya Bella — Boutique, cosméticos, bijouterie, medias y ropa importada de USA. Desde 5.000 Gs. Envío gratis desde 50.000 Gs.">
 <meta property="og:title" content="Freya Bella · Boutique & Cosméticos">
-<meta property="og:description" content="Ropa, boutique, cosméticos y prendas importadas de USA. Envío gratis desde 50.000 Gs.">
+<meta property="og:description" content="Ropa, bijouterie, medias, cosméticos y prendas importadas de USA. Desde 5.000 Gs.">
 <meta property="og:image" content="logo.jpeg">
 <meta property="og:type" content="website">
 
@@ -67,33 +67,21 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 
 /* LOGO */
 .logo{display:flex;align-items:center;gap:13px;flex-shrink:0}
-.logo-mark{
-  width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;
-  border:2px solid var(--gold);
-  box-shadow:0 8px 22px -10px rgba(74,43,61,.6), inset 0 0 0 2px #fff;
-  background:#fff;
-  display:grid;place-items:center;
-  font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--plum);
-  letter-spacing:.03em;
-  position:relative;
-}
+.logo-mark{width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--gold);box-shadow:0 8px 22px -10px rgba(74,43,61,.6), inset 0 0 0 2px #fff;background:#fff;display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--plum);letter-spacing:.03em;position:relative}
 .logo-mark img{width:100%;height:100%;object-fit:cover;display:block}
-.logo-mark.fallback{
-  background:linear-gradient(145deg,var(--plum) 0%,var(--plum-deep) 100%);
-  color:var(--gold);border-color:var(--gold);
-}
+.logo-mark.fallback{background:linear-gradient(145deg,var(--plum) 0%,var(--plum-deep) 100%);color:var(--gold);border-color:var(--gold)}
 .logo-text{display:flex;flex-direction:column;line-height:1}
 .logo-text .n1{font-family:'Playfair Display',serif;font-size:1.32rem;font-weight:600;letter-spacing:.01em}
 .logo-text .n2{font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:4px;font-weight:500}
 
 /* NAV */
-.nav{display:flex;align-items:center;gap:30px}
-.nav a{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;font-weight:400;color:var(--ink-soft);position:relative;padding:6px 0;transition:color .25s}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:400;color:var(--ink-soft);position:relative;padding:6px 0;transition:color .25s}
 .nav a::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s var(--ease)}
 .nav a:hover{color:var(--plum)}
 .nav a:hover::after{width:100%}
 .nav .hot{position:relative}
-.nav .hot::before{content:'NEW';position:absolute;top:-10px;right:-22px;font-size:.5rem;letter-spacing:.1em;background:var(--usa-red);color:#fff;padding:2px 6px;border-radius:100px;font-weight:600}
+.nav .hot::before{content:'NEW';position:absolute;top:-10px;right:-20px;font-size:.5rem;letter-spacing:.1em;background:var(--usa-red);color:#fff;padding:2px 6px;border-radius:100px;font-weight:600}
 
 /* ACTIONS */
 .actions{display:flex;align-items:center;gap:6px}
@@ -104,41 +92,51 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .cart-count.show{transform:scale(1)}
 .burger{display:none}
 
-/* HERO */
-.hero{position:relative;overflow:hidden;padding:clamp(48px,8vw,96px) 0 clamp(60px,9vw,110px)}
-.hero::before{content:'';position:absolute;top:-30%;right:-15%;width:720px;height:720px;background:radial-gradient(circle,rgba(201,143,143,.20) 0%,transparent 68%);border-radius:50%;pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-40%;left:-18%;width:640px;height:640px;background:radial-gradient(circle,rgba(194,162,107,.16) 0%,transparent 68%);border-radius:50%;pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:center;position:relative;z-index:2}
-.hero-copy h1{font-size:clamp(2.4rem,5.6vw,4.3rem);margin:.28em 0 .35em;letter-spacing:-.025em}
-.hero-copy h1 em{font-style:italic;color:var(--plum-soft);position:relative}
-.hero-copy h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.08em;height:.34em;background:linear-gradient(90deg,rgba(194,162,107,.34),rgba(201,143,143,.24));z-index:-1;border-radius:3px}
-.hero-copy p{color:var(--ink-soft);font-size:1.06rem;max-width:46ch;margin-bottom:34px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:100px;font-size:.79rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);position:relative;overflow:hidden;border:1px solid transparent;white-space:nowrap;cursor:pointer}
+/* ================= HERO NUEVO ================= */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--plum-deep);isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:1}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:heroZoom 22s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+.hero-veil{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(28,20,26,.20) 0%,rgba(28,20,26,.45) 45%,rgba(28,20,26,.92) 100%),
+  linear-gradient(90deg,rgba(28,20,26,.60) 0%,rgba(28,20,26,.15) 55%,transparent 100%)}
+.hero-content{position:relative;z-index:2;width:100%;padding:140px 22px 44px;max-width:calc(var(--maxw) + 44px);margin-inline:auto}
+.hero-content .eyebrow{color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.hero-content .eyebrow::before{content:'';width:28px;height:1px;background:var(--gold)}
+.hero-content h1{color:#fff;font-size:clamp(2.5rem,6.2vw,4.8rem);margin:.28em 0 .32em;letter-spacing:-.028em;max-width:16ch;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero-content h1 em{font-style:italic;color:var(--gold);position:relative}
+.hero-content h1 em::after{content:'';position:absolute;left:0;right:0;bottom:.05em;height:.28em;background:rgba(194,162,107,.20);z-index:-1;border-radius:3px}
+.hero-content p{color:rgba(255,255,255,.85);font-size:clamp(.98rem,1.6vw,1.1rem);max-width:52ch;margin-bottom:36px;font-weight:300}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 34px;border-radius:100px;font-size:.79rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);position:relative;overflow:hidden;border:1px solid transparent;white-space:nowrap;cursor:pointer}
 .btn svg{width:17px;height:17px}
 .btn-primary{background:var(--plum);color:#fff;box-shadow:0 14px 30px -14px rgba(74,43,61,.85)}
 .btn-primary:hover{background:var(--plum-deep);transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(74,43,61,.9)}
 .btn-ghost{border-color:var(--line);color:var(--ink);background:rgba(255,255,255,.6)}
 .btn-ghost:hover{border-color:var(--plum);color:var(--plum);transform:translateY(-3px);background:#fff}
 .btn-gold{background:var(--gold);color:#fff;box-shadow:0 14px 30px -14px rgba(194,162,107,.9)}
-.btn-gold:hover{background:#B08F55;transform:translateY(-3px)}
+.btn-gold:hover{background:#B08F55;transform:translateY(-3px);box-shadow:0 20px 40px -14px rgba(194,162,107,1)}
 .btn-wa{background:var(--green);color:#fff;box-shadow:0 14px 30px -14px rgba(37,211,102,.85)}
 .btn-wa:hover{background:#1EBE5A;transform:translateY(-3px)}
 .btn-usa{background:linear-gradient(135deg,var(--usa-blue) 0%,var(--usa-blue-dark) 100%);color:#fff;box-shadow:0 14px 30px -14px rgba(60,90,153,.9)}
 .btn-usa:hover{transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(60,90,153,1)}
+.btn-glass{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btn-glass:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.7);transform:translateY(-3px)}
 .btn-block{width:100%}
 .btn:disabled{opacity:.45;pointer-events:none}
-.hero-stats{display:flex;gap:38px;flex-wrap:wrap}
-.hero-stats .st b{display:block;font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:600;color:var(--plum)}
-.hero-stats .st span{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.hero-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:16px;position:relative}
-.mosaic-item{border-radius:var(--radius);overflow:hidden;background:var(--bg-alt);box-shadow:var(--shadow-md);position:relative;transition:transform .6s var(--ease)}
-.mosaic-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
-.mosaic-item:hover img{transform:scale(1.07)}
-.mosaic-item:nth-child(1){aspect-ratio:3/4;transform:translateY(-14px)}
-.mosaic-item:nth-child(2){aspect-ratio:3/4;margin-top:34px}
-.mosaic-item:nth-child(3){aspect-ratio:1/1;grid-column:1/-1;height:150px;margin-top:-6px}
-.mosaic-badge{position:absolute;left:14px;bottom:14px;z-index:3;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);padding:8px 16px;border-radius:100px;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);font-weight:500;box-shadow:var(--shadow-sm)}
+
+/* Barra inferior del hero */
+.hero-bottom{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.12);background:rgba(20,12,18,.42);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4)}
+.hero-bottom-inner{display:flex;justify-content:space-between;align-items:center;gap:26px;padding:22px 22px;flex-wrap:wrap;max-width:calc(var(--maxw) + 44px);margin-inline:auto}
+.hero-stats{display:flex;gap:clamp(22px,3vw,46px);flex-wrap:wrap}
+.hero-stats .st{position:relative}
+.hero-stats .st + .st::before{content:'';position:absolute;left:calc(-1 * clamp(11px,1.5vw,23px));top:20%;bottom:20%;width:1px;background:rgba(255,255,255,.14)}
+.hero-stats .st b{display:block;font-family:'Playfair Display',serif;font-size:clamp(1.15rem,1.8vw,1.45rem);font-weight:600;color:#fff;letter-spacing:.005em}
+.hero-stats .st span{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hero-scroll{display:inline-flex;align-items:center;gap:10px;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);animation:scrollBob 2.6s ease-in-out infinite}
+.hero-scroll svg{width:14px;height:14px}
+@keyframes scrollBob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
 /* BENEFITS */
 .benefits{border-block:1px solid var(--line);background:rgba(255,255,255,.55)}
@@ -207,13 +205,8 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .empty svg{width:52px;height:52px;color:var(--line);margin-bottom:18px;stroke-width:1}
 .empty h3{font-size:1.3rem;color:var(--ink);margin-bottom:8px}
 
-/* ================= IMPORT USA ================= */
-.imports{
-  background:linear-gradient(160deg,#EEF2F9 0%,#E4EBF5 45%,#EDF1F8 100%);
-  position:relative;overflow:hidden;
-  padding:clamp(64px,8vw,110px) 0;
-  border-block:1px solid rgba(60,90,153,.10);
-}
+/* IMPORT USA */
+.imports{background:linear-gradient(160deg,#EEF2F9 0%,#E4EBF5 45%,#EDF1F8 100%);position:relative;overflow:hidden;padding:clamp(64px,8vw,110px) 0;border-block:1px solid rgba(60,90,153,.10)}
 .imports::before{content:'';position:absolute;top:-180px;left:-140px;width:600px;height:600px;background:radial-gradient(circle,rgba(60,90,153,.14),transparent 70%);border-radius:50%}
 .imports::after{content:'';position:absolute;bottom:-200px;right:-160px;width:640px;height:640px;background:radial-gradient(circle,rgba(178,34,52,.10),transparent 70%);border-radius:50%}
 .imports .container{position:relative;z-index:2}
@@ -221,70 +214,51 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .imports .section-head p{color:#5A6270}
 .imports .divider-gold{background:var(--usa-blue)}
 .imports .divider-gold::after{background:var(--usa-blue)}
-
-.import-flag-badge{
-  display:inline-flex;align-items:center;gap:9px;
-  background:linear-gradient(135deg,var(--usa-blue) 0%,var(--usa-blue-dark) 60%,var(--usa-red) 160%);
-  color:#fff;padding:7px 18px;border-radius:100px;
-  font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
-  box-shadow:0 10px 24px -12px rgba(60,90,153,.7);
-  margin-bottom:14px;
-}
+.import-flag-badge{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--usa-blue) 0%,var(--usa-blue-dark) 60%,var(--usa-red) 160%);color:#fff;padding:7px 18px;border-radius:100px;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;box-shadow:0 10px 24px -12px rgba(60,90,153,.7);margin-bottom:14px}
 .import-flag-badge svg{width:14px;height:14px}
-
 .import-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
-
-.import-card{
-  background:#fff;border-radius:var(--radius);overflow:hidden;
-  border:1px solid rgba(60,90,153,.14);
-  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;
-  position:relative;
-  animation:fadeUp .55s var(--ease) both;
-}
-.import-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 30px 60px -30px rgba(60,90,153,.55);
-  border-color:rgba(60,90,153,.35);
-}
+.import-card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(60,90,153,.14);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;position:relative;animation:fadeUp .55s var(--ease) both}
+.import-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(60,90,153,.55);border-color:rgba(60,90,153,.35)}
 .import-card .card-media{aspect-ratio:3/4;background:#F0F3F9}
-.import-badge{
-  position:absolute;top:14px;left:14px;z-index:3;
-  padding:6px 12px;border-radius:8px;
-  font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
-  background:linear-gradient(135deg,var(--usa-blue),var(--usa-red));
-  color:#fff;box-shadow:0 6px 14px -6px rgba(60,90,153,.8);
-}
-.import-tag{
-  position:absolute;top:14px;right:14px;z-index:3;
-  background:rgba(255,255,255,.96);color:var(--usa-red);
-  padding:6px 12px;border-radius:100px;
-  font-size:.62rem;letter-spacing:.08em;font-weight:600;
-  box-shadow:var(--shadow-xs);text-transform:uppercase;
-}
+.import-badge{position:absolute;top:14px;left:14px;z-index:3;padding:6px 12px;border-radius:8px;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:linear-gradient(135deg,var(--usa-blue),var(--usa-red));color:#fff;box-shadow:0 6px 14px -6px rgba(60,90,153,.8)}
+.import-tag{position:absolute;top:14px;right:14px;z-index:3;background:rgba(255,255,255,.96);color:var(--usa-red);padding:6px 12px;border-radius:100px;font-size:.62rem;letter-spacing:.08em;font-weight:600;box-shadow:var(--shadow-xs);text-transform:uppercase}
 .import-tag.blue{color:var(--usa-blue)}
 .import-card .card-body{padding:18px}
 .import-card .card-cat{color:var(--usa-blue)}
 .import-card .price .now{color:var(--usa-blue-dark)}
 .import-card:hover .card-body h3{color:var(--usa-blue-dark)}
 .import-card .card-overlay{background:linear-gradient(to top,rgba(20,30,60,.72),transparent)}
-
-.import-cta{
-  margin-top:48px;
-  padding:clamp(28px,4vw,42px);
-  background:rgba(255,255,255,.75);
-  backdrop-filter:blur(10px);
-  border-radius:26px;
-  border:1px solid rgba(60,90,153,.18);
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-.import-cta::before{
-  content:'🇺🇸';position:absolute;top:-30px;right:-20px;font-size:150px;opacity:.05;transform:rotate(-12deg);
-}
+.import-cta{margin-top:48px;padding:clamp(28px,4vw,42px);background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border-radius:26px;border:1px solid rgba(60,90,153,.18);text-align:center;position:relative;overflow:hidden}
+.import-cta::before{content:'🇺🇸';position:absolute;top:-30px;right:-20px;font-size:150px;opacity:.05;transform:rotate(-12deg)}
 .import-cta h3{font-size:clamp(1.3rem,2.6vw,1.7rem);color:var(--plum-deep);margin-bottom:8px;position:relative;z-index:2}
 .import-cta p{color:#5A6270;font-size:.95rem;margin-bottom:22px;max-width:56ch;margin-inline:auto;position:relative;z-index:2}
 .import-cta .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+
+/* ========== ECONÓMICOS ========== */
+.eco{
+  background:linear-gradient(180deg,#FFF8F2 0%,#FDF3EA 100%);
+  position:relative;overflow:hidden;
+  padding:clamp(64px,8vw,110px) 0;
+  border-block:1px solid rgba(201,143,143,.14);
+}
+.eco::before{content:'';position:absolute;top:-160px;right:-140px;width:520px;height:520px;background:radial-gradient(circle,rgba(201,143,143,.16),transparent 70%);border-radius:50%}
+.eco::after{content:'';position:absolute;bottom:-180px;left:-120px;width:560px;height:560px;background:radial-gradient(circle,rgba(194,162,107,.13),transparent 70%);border-radius:50%}
+.eco .container{position:relative;z-index:2}
+.eco .section-head h2{color:var(--plum-deep)}
+.eco-badge{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--rose) 0%,#B06A6A 100%);color:#fff;padding:7px 18px;border-radius:100px;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;box-shadow:0 10px 24px -12px rgba(201,143,143,.8);margin-bottom:14px}
+.eco-badge svg{width:14px;height:14px}
+.eco-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.eco-card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(201,143,143,.16);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;position:relative;animation:fadeUp .55s var(--ease) both}
+.eco-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(201,143,143,.6);border-color:rgba(201,143,143,.4)}
+.eco-card .card-media{aspect-ratio:3/4;background:#FDF6F0}
+.eco-badge-tag{position:absolute;top:14px;left:14px;z-index:3;padding:6px 12px;border-radius:8px;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:linear-gradient(135deg,var(--rose),#A85C5C);color:#fff;box-shadow:0 6px 14px -6px rgba(201,143,143,.9)}
+.eco-price-tag{position:absolute;top:14px;right:14px;z-index:3;background:rgba(255,255,255,.97);color:var(--plum);padding:6px 12px;border-radius:8px;font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;letter-spacing:.01em;box-shadow:var(--shadow-xs);border:1px solid var(--rose-soft)}
+.eco-card .card-body{padding:18px}
+.eco-card .card-cat{color:var(--rose)}
+.eco-card .price .now{color:#A85C5C}
+.eco-card:hover .card-body h3{color:#A85C5C}
+.eco-card .card-overlay{background:linear-gradient(to top,rgba(60,20,30,.72),transparent)}
+.eco-cta{text-align:center;margin-top:44px}
 
 /* COSMETICS */
 .cosmetics{background:linear-gradient(160deg,var(--plum-deep) 0%,#3A2130 55%,#4A2B3D 100%);color:#F3E9EE;position:relative;overflow:hidden;padding:clamp(64px,8vw,110px) 0}
@@ -455,8 +429,11 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .benefit:nth-child(1),.benefit:nth-child(2){border-bottom:1px solid var(--line)}
 }
 @media(max-width:860px){
-  .hero-grid{grid-template-columns:1fr;gap:48px}
-  .hero-mosaic{max-width:520px;margin-inline:auto}
+  .hero{min-height:80vh}
+  .hero-content{padding:120px 22px 34px}
+  .hero-bottom-inner{justify-content:center;text-align:center}
+  .hero-stats{justify-content:center}
+  .hero-scroll{display:none}
   .pv-grid{grid-template-columns:1fr}
   .pv-media{min-height:300px;aspect-ratio:4/3}
   .news-inner{grid-template-columns:1fr;gap:28px}
@@ -467,6 +444,11 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .header-inner{height:68px}
   .logo-text .n1{font-size:1.1rem}
   .logo-mark{width:44px;height:44px}
+  .hero-content h1{max-width:100%}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{flex:1;min-width:140px;padding:14px 20px}
+  .hero-stats{gap:20px}
+  .hero-stats .st + .st::before{display:none}
   .toolbar{flex-direction:column;align-items:stretch}
   .chips{overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;scrollbar-width:none;-ms-overflow-style:none}
   .chips::-webkit-scrollbar{display:none}
@@ -474,12 +456,12 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .toolbar-right{flex-direction:column;align-items:stretch}
   .search-box input,.search-box input:focus{width:100%}
   .sort-select{width:100%}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+  .grid,.eco-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+  .cosmo-grid,.import-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
   .card-body{padding:14px}
   .card-body h3{font-size:.94rem}
   .card-desc{display:none}
   .price .now{font-size:1rem}
-  .cosmo-grid,.import-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
   .benefits-grid{grid-template-columns:1fr}
   .benefit{border-right:0;border-bottom:1px solid var(--line);padding:22px}
   .benefit:last-child{border-bottom:0}
@@ -489,7 +471,6 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .form-grid{grid-template-columns:1fr}
   .wa-float{width:52px;height:52px;bottom:18px;right:18px}
   .wa-float svg{width:25px;height:25px}
-  .hero-stats{gap:26px}
   .modal{padding:0}
   .modal-card{border-radius:0;max-height:100vh;min-height:100vh}
 }
@@ -504,11 +485,13 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="track">
-    <span>🇺🇸 Ropa importada recién llegada</span>
+    <span>🚚 Envío gratis desde 50.000 Gs</span>
     <span class="dot"></span>
-    <span>Envío gratis desde 50.000 Gs</span>
+    <span>💎 Bijouterie desde 5.000 Gs</span>
     <span class="dot"></span>
-    <span>Pago contra entrega</span>
+    <span>🇺🇸 Ropa importada USA</span>
+    <span class="dot"></span>
+    <span>💳 Pago contra entrega</span>
   </div>
 </div>
 
@@ -526,6 +509,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
     </a>
     <nav class="nav">
       <a href="#catalogo">Catálogo</a>
+      <a href="#economicos">Económicos</a>
       <a href="#importados" class="hot">Importados</a>
       <a href="#cosmeticos">Cosméticos</a>
       <a href="#contacto">Contacto</a>
@@ -550,32 +534,40 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">Nueva Colección · 2025</span>
-      <h1>Elegancia que <em>se siente</em>, estilo que permanece.</h1>
-      <p>Boutique, cosméticos y ahora ropa importada de USA a precios que te van a encantar. Todo en un solo lugar.</p>
-      <div class="hero-cta">
-        <a href="#catalogo" class="btn btn-primary">
-          Explorar catálogo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#importados" class="btn btn-usa">🇺🇸 Ver importados</a>
-      </div>
+<!-- ============ HERO NUEVO EDITORIAL ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=80"
+         data-ph="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='1200'%3E%3Crect width='2000' height='1200' fill='%234A2B3D'/%3E%3C/svg%3E"
+         alt="Freya Bella editorial">
+    <div class="hero-veil"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="eyebrow">Nueva Colección · 2025</span>
+    <h1>Estilo que <em>brilla</em>, precios que enamoran.</h1>
+    <p>Ropa, bijouterie, medias, cosméticos y prendas importadas de USA. Todo lo que buscas desde <b style="color:var(--gold);font-weight:500">₲5.000</b>.</p>
+    <div class="hero-cta">
+      <a href="#catalogo" class="btn btn-gold">
+        Explorar catálogo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#economicos" class="btn btn-glass">💎 Económicos</a>
+      <a href="#importados" class="btn btn-glass">🇺🇸 Importados USA</a>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="hero-bottom-inner">
       <div class="hero-stats">
         <div class="st"><b>+2.400</b><span>Clientas felices</span></div>
         <div class="st"><b>4.9★</b><span>Valoración media</span></div>
         <div class="st"><b>24h</b><span>Despacho express</span></div>
+        <div class="st"><b>Desde ₲5.000</b><span>Bijouterie</span></div>
       </div>
-    </div>
-    <div class="hero-mosaic" id="heroMosaic">
-      <div class="mosaic-item"><img data-ph="" alt="Vestido de temporada" loading="eager"></div>
-      <div class="mosaic-item"><img data-ph="" alt="Accesorios de boutique" loading="eager"></div>
-      <div class="mosaic-item">
-        <img data-ph="" alt="Cosméticos Freya Bella" loading="eager">
-        <span class="mosaic-badge">Nueva línea · Glow</span>
+      <div class="hero-scroll">
+        Descubrir
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </div>
     </div>
   </div>
@@ -599,7 +591,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
       </div>
       <div class="benefit">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 000-7.8z"/></svg>
-        <div><b>Selección curada</b><p>Piezas limitadas elegidas a mano, no producción masiva.</p></div>
+        <div><b>Precios desde ₲5.000</b><p>Bijouterie, medias y básicos para todos los presupuestos.</p></div>
       </div>
     </div>
   </div>
@@ -610,8 +602,8 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Nuestro Catálogo</span>
-      <h2>Piezas seleccionadas para ti</h2>
-      <p>Moda, boutique, belleza y ropa importada de USA. Filtra por categoría y encuentra tu próximo imprescindible.</p>
+      <h2>Todo lo que buscas en un solo lugar</h2>
+      <p>Ropa, boutique, importados, medias, bijouterie y cosméticos. Filtra por categoría y encuentra tu próximo imprescindible desde ₲5.000.</p>
       <div class="divider-gold"></div>
     </div>
     <div class="toolbar">
@@ -635,6 +627,28 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   </div>
 </section>
 
+<!-- ================= ECONÓMICOS ================= -->
+<section class="eco" id="economicos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eco-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>
+        Precios bajos
+      </span>
+      <h2>Económicos & Imperdibles 💕</h2>
+      <p>Básicos, medias y bijouterie con la mejor relación precio-calidad. Perfectos para surtir tu guardarropa sin gastar de más. Desde <b style="color:var(--rose);font-weight:600">₲5.000</b>.</p>
+      <div class="divider-gold" style="background:var(--rose)"></div>
+    </div>
+    <div class="eco-grid" id="ecoGrid"></div>
+    <div class="eco-cta">
+      <a href="#" class="btn btn-primary" id="waEco">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+        Consultar combos por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= IMPORT USA ================= -->
 <section class="imports" id="importados">
   <div class="container">
@@ -644,7 +658,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
         Import USA
       </span>
       <h2>Recién llegadas de Estados Unidos 🇺🇸</h2>
-      <p>Ropa americana importada en perfecto estado, con estilo urbano y deportivo. Precios de paca, calidad premium. ¡Stock limitado, se van volando!</p>
+      <p>Ropa americana importada con estilo urbano y deportivo. Precios de paca, calidad premium. ¡Stock limitado!</p>
       <div class="divider-gold"></div>
     </div>
 
@@ -716,7 +730,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
             <span class="n2">Boutique</span>
           </div>
         </div>
-        <p>Boutique, cosméticos y ropa importada de USA. Para la mujer que no sigue tendencias: las crea.</p>
+        <p>Boutique, cosméticos, bijouterie y ropa importada de USA. Para la mujer que no sigue tendencias: las crea.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -730,9 +744,11 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
         <ul>
           <li><a href="#catalogo">Novedades</a></li>
           <li><a href="#catalogo">Ropa</a></li>
-          <li><a href="#catalogo">Boutique</a></li>
+          <li><a href="#economicos">Económicos</a></li>
           <li><a href="#importados">Importados USA</a></li>
           <li><a href="#cosmeticos">Cosméticos</a></li>
+          <li><a href="#catalogo">Bijouterie</a></li>
+          <li><a href="#catalogo">Medias</a></li>
         </ul>
       </div>
       <div>
@@ -815,7 +831,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
       <div class="form-grid">
         <div class="field full">
           <label for="pNombre">Nombre del producto</label>
-          <input type="text" id="pNombre" placeholder="Ej. Hoodie Oversize USA" required>
+          <input type="text" id="pNombre" placeholder="Ej. Pack Medias Deportivas x3" required>
         </div>
         <div class="field">
           <label for="pCategoria">Categoría</label>
@@ -823,6 +839,8 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
             <option value="Ropa">Ropa</option>
             <option value="Boutique">Boutique</option>
             <option value="Importados">Importados</option>
+            <option value="Medias">Medias</option>
+            <option value="Bijouterie">Bijouterie</option>
             <option value="Cosméticos">Cosméticos</option>
             <option value="Accesorios">Accesorios</option>
           </select>
@@ -838,7 +856,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
         </div>
         <div class="field">
           <label for="pPrecio">Precio (₲)</label>
-          <input type="number" id="pPrecio" min="0" step="1000" placeholder="65000" required>
+          <input type="number" id="pPrecio" min="0" step="1000" placeholder="25000" required>
         </div>
         <div class="field">
           <label for="pPrecioAntes">Precio anterior (₲)</label>
@@ -889,7 +907,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 
 <script type="module">
 /* ============================================================
-   FREYA BELLA · APP · Firebase + WhatsApp + Guaraníes
+   FREYA BELLA · APP
    ============================================================ */
 
 const CONFIG = {
@@ -901,9 +919,6 @@ const CONFIG = {
   adminPass: 'freya2025'
 };
 
-/* ============================================================
-   🔥 FIREBASE — CONFIGURA AQUÍ
-   ============================================================ */
 const FIREBASE_CONFIG = {
   apiKey:            "TU_API_KEY_AQUI",
   authDomain:        "pagina-butique.firebaseapp.com",
@@ -941,53 +956,38 @@ async function initFirebase() {
   }
 }
 
-/* ============================================================
-   🖼️ LOGO — Carga robusta con múltiples fallbacks
-   ============================================================ */
+/* Logo robusto con fallback */
 function setupLogo(imgId, markId) {
   const img  = document.getElementById(imgId);
   const mark = document.getElementById(markId);
   if (!img || !mark) return;
-
-  const fuentes = ['logo.jpeg', 'logo.png', 'logo.jpg', 'Logo.jpeg', 'Logo.png', 'Logo.jpg', 'logo.webp'];
-  let intento = 0;
-
-  function fallback() {
-    intento++;
-    if (intento < fuentes.length) {
-      img.src = fuentes[intento];
-    } else {
-      // Sin imagen → monograma elegante
+  const fuentes = ['logo.jpeg','logo.png','logo.jpg','Logo.jpeg','Logo.png','Logo.jpg','logo.webp'];
+  let i = 0;
+  function fb() {
+    i++;
+    if (i < fuentes.length) img.src = fuentes[i];
+    else {
       img.style.display = 'none';
       mark.classList.add('fallback');
       mark.textContent = 'FB';
-      console.warn('[Freya Bella] No se encontró ningún archivo de logo (probé: ' + fuentes.join(', ') + '). Se muestra el monograma "FB".');
+      console.warn('[Freya Bella] No se encontró ningún archivo de logo. Se muestra el monograma "FB".');
     }
   }
-
-  img.addEventListener('error', fallback);
-  img.addEventListener('load', () => {
-    console.info(`[Freya Bella] Logo cargado ✅ (${img.src.split('/').pop()})`);
-  });
-
-  // Forzar re-check si ya estaba rota al cargar la página
-  if (img.complete && img.naturalWidth === 0) fallback();
+  img.addEventListener('error', fb);
+  img.addEventListener('load', () => console.info(`[Freya Bella] Logo cargado ✅ (${img.src.split('/').pop()})`));
+  if (img.complete && img.naturalWidth === 0) fb();
 }
-
 setupLogo('logoImg', 'logoMark');
 setupLogo('logoImgFooter', 'logoMarkFooter');
 
-/* ---------- UTILIDADES ---------- */
+/* Utilidades */
 const $  = (s, ctx = document) => ctx.querySelector(s);
 const $$ = (s, ctx = document) => [...ctx.querySelectorAll(s)];
-
 const money = n => {
   const num = Math.round(Number(n) || 0);
   return CONFIG.moneda + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 };
-
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-
 const LS = {
   get(k, fb) { try { return JSON.parse(localStorage.getItem('fb_' + k)) ?? fb; } catch { return fb; } },
   set(k, v)  { try { localStorage.setItem('fb_' + k, JSON.stringify(v)); } catch {} }
@@ -998,7 +998,9 @@ const PH_THEMES = {
   'Boutique':    { bg:'#F2ECE1', fg:'#8A7448' },
   'Cosméticos':  { bg:'#F5EAE4', fg:'#A56A54' },
   'Accesorios':  { bg:'#EAEBF0', fg:'#5A5F70' },
-  'Importados':  { bg:'#E8EEF8', fg:'#3C5A99' }
+  'Importados':  { bg:'#E8EEF8', fg:'#3C5A99' },
+  'Medias':      { bg:'#F0EBF3', fg:'#7A5C8A' },
+  'Bijouterie':  { bg:'#F5EFE5', fg:'#A68350' }
 };
 function placeholder(nombre = 'FB', categoria = 'Ropa') {
   const t = PH_THEMES[categoria] || { bg:'#EFEAE6', fg:'#8A8189' };
@@ -1013,123 +1015,144 @@ function placeholder(nombre = 'FB', categoria = 'Ropa') {
   </svg>`;
   return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
 }
-
 document.addEventListener('error', e => {
   const el = e.target;
   if (el.tagName !== 'IMG' || el.dataset.phdone) return;
-  if (el.id === 'logoImg' || el.id === 'logoImgFooter') return; // el logo tiene su propio handler
+  if (el.id === 'logoImg' || el.id === 'logoImgFooter') return;
   el.dataset.phdone = '1';
   el.src = el.dataset.ph || placeholder('FB', 'Ropa');
 }, true);
 
-/* ---------- CATÁLOGO DEMO ---------- */
-const UNSPLASH = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=80`;
+/* ============ CATÁLOGO DEMO COMPLETO ============ */
+const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=80`;
 const PRODUCTOS_DEMO = [
   /* ============ ROPA ELEGANTE ============ */
   { id:'p01', nombre:'Vestido Aurora', categoria:'Ropa', precio:350000, precioAntes:450000, badge:'Oferta',
-    img:UNSPLASH('1595777457583-95e059d581b8'),
-    desc:'Vestido midi en satén fluido con caída elegante.',
+    img:U('1595777457583-95e059d581b8'), desc:'Vestido midi en satén fluido con caída elegante.',
     tallas:['XS','S','M','L','XL'], colores:['#1C1619','#8B5A6B','#C2A26B'], stock:14, rating:4.8, orden:1 },
   { id:'p02', nombre:'Blusa Seda Lumière', categoria:'Ropa', precio:230000, badge:'Nuevo',
-    img:UNSPLASH('1485968579580-b6d095142e6e'),
-    desc:'Blusa de seda con escote en V y manga larga.',
+    img:U('1485968579580-b6d095142e6e'), desc:'Blusa de seda con escote en V y manga larga.',
     tallas:['S','M','L'], colores:['#FFFFFF','#EBD8D8','#4A2B3D'], stock:20, rating:4.6, orden:2 },
   { id:'p03', nombre:'Conjunto Lino Solène', categoria:'Ropa', precio:400000, precioAntes:500000, badge:'Bestseller',
-    img:UNSPLASH('1490481651871-ab68de25d43d'),
-    desc:'Conjunto de lino 100% natural: top y pantalón.',
+    img:U('1490481651871-ab68de25d43d'), desc:'Conjunto de lino 100% natural: top y pantalón.',
     tallas:['S','M','L','XL'], colores:['#E8DCC4','#FFFFFF','#1C1619'], stock:9, rating:4.9, orden:3 },
-  { id:'p04', nombre:'Falda Midi Verona', categoria:'Ropa', precio:280000,
-    img:UNSPLASH('1583496661160-fb5886a13d77'),
-    desc:'Falda plisada de tiro alto con movimiento fluido.',
-    tallas:['XS','S','M','L'], colores:['#4A2B3D','#1C1619','#C98F8F'], stock:16, rating:4.5, orden:4 },
+
+  /* ============ ROPA ECONÓMICA (30-60K) ============ */
+  { id:'r01', nombre:'Top Básico Algodón', categoria:'Ropa', precio:35000, precioAntes:45000, badge:'Oferta',
+    img:U('1564257631407-4deb1f99d992'), desc:'Top básico de algodón peinado. Escote redondo, fit ajustado.',
+    tallas:['XS','S','M','L'], colores:['#FFFFFF','#1C1619','#EBD8D8','#8A8189'], stock:30, rating:4.5, orden:40, tag:'económico' },
+  { id:'r02', nombre:'Crop Top Canalé', categoria:'Ropa', precio:32000,
+    img:U('1551698618-1dfe5d97d256'), desc:'Crop top de canalé elástico. Combinación perfecta con tiro alto.',
+    tallas:['XS','S','M','L'], colores:['#EBD8D8','#1C1619','#C2A26B'], stock:25, rating:4.6, orden:41, tag:'económico' },
+  { id:'r03', nombre:'Short Ciclista Deportivo', categoria:'Ropa', precio:38000, badge:'Nuevo',
+    img:U('1591195853828-11db59a44f6b'), desc:'Short ciclista de tiro alto, tela compresiva. Ideal para gym.',
+    tallas:['XS','S','M','L'], colores:['#1C1619','#4A2B3D','#8A8189'], stock:22, rating:4.7, orden:42, tag:'económico' },
+  { id:'r04', nombre:'Remera Oversize Básica', categoria:'Ropa', precio:45000, badge:'Bestseller',
+    img:U('1521572163474-6864f9cf17ab'), desc:'Remera oversize de algodón grueso. Unisex, corte relajado.',
+    tallas:['S','M','L','XL'], colores:['#FFFFFF','#1C1619','#EBD8D8'], stock:28, rating:4.8, orden:43, tag:'económico' },
+  { id:'r05', nombre:'Body Manga Larga', categoria:'Ropa', precio:48000,
+    img:U('1594633312681-425c7b97ccd1'), desc:'Body de manga larga con escote cuadrado. Tela suave y stretch.',
+    tallas:['XS','S','M','L'], colores:['#1C1619','#4A2B3D','#FFFFFF'], stock:18, rating:4.6, orden:44, tag:'económico' },
+  { id:'r06', nombre:'Falda Corta Plisada', categoria:'Ropa', precio:55000, precioAntes:65000, badge:'Oferta',
+    img:U('1583496661160-fb5886a13d77'), desc:'Falda plisada corta de tiro alto. Movimiento fluido y fit favorecedor.',
+    tallas:['XS','S','M','L'], colores:['#1C1619','#4A2B3D','#C98F8F'], stock:15, rating:4.5, orden:45, tag:'económico' },
+  { id:'r07', nombre:'Camisa Oversize Blanca', categoria:'Ropa', precio:58000,
+    img:U('1596755094514-f87e34085b2c'), desc:'Camisa oversize de algodón. Un clásico que combina con todo.',
+    tallas:['S','M','L','XL'], colores:['#FFFFFF','#EBD8D8'], stock:20, rating:4.7, orden:46, tag:'económico' },
+  { id:'r08', nombre:'Jogger Deportivo', categoria:'Ropa', precio:60000,
+    img:U('1552902865-b72c031ac5ea'), desc:'Pantalón jogger con puños elásticos y cordón. Cómodo y estiloso.',
+    tallas:['S','M','L','XL'], colores:['#1C1619','#8A8189','#4A2B3D'], stock:16, rating:4.6, orden:47, tag:'económico' },
 
   /* ============ BOUTIQUE ============ */
   { id:'p06', nombre:'Bolso Artemis', categoria:'Boutique', precio:450000, badge:'Bestseller',
-    img:UNSPLASH('1584917865442-de89df76afd3'),
-    desc:'Bolso estructurado en cuero vegano con herrajes dorados.',
+    img:U('1584917865442-de89df76afd3'), desc:'Bolso estructurado en cuero vegano con herrajes dorados.',
     tallas:[], colores:['#4A2B3D','#1C1619','#C2A26B'], stock:8, rating:4.9, orden:6 },
-  { id:'p07', nombre:'Aretes Perla Rosé', categoria:'Boutique', precio:150000, badge:'Nuevo',
-    img:UNSPLASH('1535632066927-ab7c9ab60908'),
-    desc:'Aretes de perla cultivada con baño de oro rosado.',
-    tallas:[], colores:['#EBD8D8','#C2A26B'], stock:25, rating:4.8, orden:7 },
   { id:'p08', nombre:'Pañuelo Seda Provence', categoria:'Boutique', precio:130000, precioAntes:180000, badge:'Oferta',
-    img:UNSPLASH('1601924994987-69e26d50dc26'),
-    desc:'Pañuelo de seda con estampado floral exclusivo.',
+    img:U('1601924994987-69e26d50dc26'), desc:'Pañuelo de seda con estampado floral exclusivo.',
     tallas:[], colores:['#C98F8F','#C2A26B','#4A2B3D'], stock:30, rating:4.4, orden:8 },
 
-  /* ============ 🇺🇸 IMPORTADOS USA ============ */
+  /* ============ 🇺🇸 IMPORTADOS ============ */
   { id:'i01', nombre:'Hoodie Oversize Urban', categoria:'Importados', precio:85000, precioAntes:120000, badge:'Nuevo',
-    img:UNSPLASH('1556821840-3a63f95609a7'),
-    desc:'Buzo con capucha oversize, tela gruesa frisada. Importado, talla unisex.',
-    tallas:['S','M','L','XL'], colores:['#1C1619','#8A8189','#3C5A99'], stock:18, rating:4.7, orden:20,
-    tag:'recién llegado' },
-
+    img:U('1556821840-3a63f95609a7'), desc:'Buzo con capucha oversize, tela gruesa frisada. Importado.',
+    tallas:['S','M','L','XL'], colores:['#1C1619','#8A8189','#3C5A99'], stock:18, rating:4.7, orden:20, tag:'recién llegado' },
   { id:'i02', nombre:'Jean Mom Fit Vintage', categoria:'Importados', precio:95000, precioAntes:135000, badge:'Bestseller',
-    img:UNSPLASH('1542272604-787c3835535d'),
-    desc:'Jean mom fit de tiro alto, corte recto. Lavado vintage, denim grueso importado.',
-    tallas:['26','28','30','32','34'], colores:['#5A7DA6','#2B3B54'], stock:12, rating:4.8, orden:21,
-    tag:'top ventas' },
-
+    img:U('1542272604-787c3835535d'), desc:'Jean mom fit de tiro alto, corte recto. Lavado vintage.',
+    tallas:['26','28','30','32','34'], colores:['#5A7DA6','#2B3B54'], stock:12, rating:4.8, orden:21, tag:'top ventas' },
   { id:'i03', nombre:'Camiseta Gráfica Street', categoria:'Importados', precio:45000,
-    img:UNSPLASH('1521572163474-6864f9cf17ab'),
-    desc:'Camiseta algodón peinado con estampado frontal. Estilo urbano americano.',
-    tallas:['S','M','L','XL'], colores:['#FFFFFF','#1C1619','#8A8189'], stock:25, rating:4.6, orden:22,
-    tag:'stock amplio' },
-
+    img:U('1521572163474-6864f9cf17ab'), desc:'Camiseta algodón peinado con estampado frontal.',
+    tallas:['S','M','L','XL'], colores:['#FFFFFF','#1C1619','#8A8189'], stock:25, rating:4.6, orden:22, tag:'stock amplio' },
   { id:'i04', nombre:'Chaqueta Denim Clásica', categoria:'Importados', precio:120000, precioAntes:160000, badge:'Oferta',
-    img:UNSPLASH('1544022613-e87ca75a784a'),
-    desc:'Chaqueta de jean con botones metálicos. Un clásico que nunca pasa de moda.',
-    tallas:['S','M','L'], colores:['#5A7DA6','#2B3B54'], stock:8, rating:4.9, orden:23,
-    tag:'últimas piezas' },
-
-  { id:'i05', nombre:'Short Deportivo Running', categoria:'Importados', precio:55000,
-    img:UNSPLASH('1591195853828-11db59a44f6b'),
-    desc:'Short deportivo con forro interior y bolsillo lateral con cierre.',
-    tallas:['S','M','L','XL'], colores:['#1C1619','#3C5A99','#B22234'], stock:20, rating:4.5, orden:24,
-    tag:'nuevo lote' },
-
+    img:U('1544022613-e87ca75a784a'), desc:'Chaqueta de jean con botones metálicos. Un clásico.',
+    tallas:['S','M','L'], colores:['#5A7DA6','#2B3B54'], stock:8, rating:4.9, orden:23, tag:'últimas piezas' },
   { id:'i06', nombre:'Top Deportivo Seamless', categoria:'Importados', precio:40000,
-    img:UNSPLASH('1571019613454-1cb2f99b2d8b'),
-    desc:'Top deportivo sin costuras, soporte medio. Tela transpirable importada.',
-    tallas:['XS','S','M','L'], colores:['#1C1619','#EBD8D8','#8A8189'], stock:22, rating:4.7, orden:25,
-    tag:'recién llegado' },
-
+    img:U('1571019613454-1cb2f99b2d8b'), desc:'Top deportivo sin costuras, soporte medio.',
+    tallas:['XS','S','M','L'], colores:['#1C1619','#EBD8D8','#8A8189'], stock:22, rating:4.7, orden:25, tag:'recién llegado' },
   { id:'i07', nombre:'Buzo Canguro Fleece', categoria:'Importados', precio:92000, precioAntes:115000,
-    img:UNSPLASH('1620799140408-edc6dcb6d633'),
-    desc:'Buzo con canguro y capucha, tela fleece interior. Calor y estilo en uno.',
-    tallas:['S','M','L','XL'], colores:['#8A8189','#1C1619','#4A2B3D'], stock:14, rating:4.8, orden:26,
-    tag:'top ventas' },
+    img:U('1620799140408-edc6dcb6d633'), desc:'Buzo con canguro y capucha, tela fleece interior.',
+    tallas:['S','M','L','XL'], colores:['#8A8189','#1C1619','#4A2B3D'], stock:14, rating:4.8, orden:26, tag:'top ventas' },
 
-  { id:'i08', nombre:'Leggings Deportivos Full', categoria:'Importados', precio:60000,
-    img:UNSPLASH('1506629082955-511b1aa562c8'),
-    desc:'Leggings de tiro alto, efecto realce, tela compresiva y opaca.',
-    tallas:['XS','S','M','L','XL'], colores:['#1C1619','#2B3B54','#4A2B3D'], stock:19, rating:4.9, orden:27,
-    tag:'stock amplio' },
+  /* ============ 🧦 MEDIAS (desde 15K) ============ */
+  { id:'m01', nombre:'Medias de Encaje / Red', categoria:'Medias', precio:15000, badge:'Oferta',
+    img:U('1583241800698-e8ab01c85b6a'), desc:'Medias de encaje con diseño delicado. Perfectas para looks especiales.',
+    tallas:['Único'], colores:['#1C1619','#EBD8D8'], stock:40, rating:4.7, orden:50, tag:'desde ₲15.000' },
+  { id:'m02', nombre:'Medias Invisibles x6', categoria:'Medias', precio:20000, badge:'Bestseller',
+    img:U('1596755094514-f87e34085b2c'), desc:'Pack x6 pares de medias invisibles de silicona. No se marcan.',
+    tallas:['Único'], colores:['#EBD8D8','#1C1619'], stock:35, rating:4.8, orden:51, tag:'pack x6' },
+  { id:'m03', nombre:'Pack x3 Medias Rayadas', categoria:'Medias', precio:22000,
+    img:U('1608231387042-66d1773070a5'), desc:'Pack x3 pares de medias caña alta con rayas. Estilo retro.',
+    tallas:['Único'], colores:['#FFFFFF','#1C1619','#4A2B3D'], stock:28, rating:4.6, orden:52, tag:'pack x3' },
+  { id:'m04', nombre:'Pack x3 Medias Deportivas', categoria:'Medias', precio:25000, badge:'Nuevo',
+    img:U('1580894742597-87bc8789db3d'), desc:'Pack x3 pares de medias deportivas con soporte en el arco.',
+    tallas:['Único'], colores:['#FFFFFF','#1C1619','#3C5A99'], stock:30, rating:4.8, orden:53, tag:'pack x3' },
+  { id:'m05', nombre:'Medias Soquete Algodón x5', categoria:'Medias', precio:30000, badge:'Bestseller',
+    img:U('1586350977771-b3b0abd50c82'), desc:'Pack x5 pares de soquetes de algodón peinado. Súper cómodos.',
+    tallas:['Único'], colores:['#FFFFFF','#EBD8D8','#8A8189'], stock:25, rating:4.9, orden:54, tag:'pack x5' },
+  { id:'m06', nombre:'Medias Térmicas Invierno', categoria:'Medias', precio:35000,
+    img:U('1618354691373-d851c5c3a990'), desc:'Medias térmicas con interior afelpado. Calor garantizado.',
+    tallas:['Único'], colores:['#1C1619','#4A2B3D','#8A8189'], stock:20, rating:4.7, orden:55, tag:'invierno' },
+
+  /* ============ 💎 BIJOUTERIE (desde 5K) ============ */
+  { id:'b01', nombre:'Anillo Ajustable Dije', categoria:'Bijouterie', precio:5000, badge:'Oferta',
+    img:U('1603561591411-07134e71a2a9'), desc:'Anillo ajustable con dije minimalista. Baño dorado antialérgico.',
+    tallas:['Ajustable'], colores:['#C2A26B','#C0C0C0'], stock:50, rating:4.5, orden:60, tag:'desde ₲5.000' },
+  { id:'b02', nombre:'Aretes Mini Argolla', categoria:'Bijouterie', precio:8000, badge:'Bestseller',
+    img:U('1535632066927-ab7c9ab60908'), desc:'Aretes mini argolla de 12mm. Livianos para uso diario.',
+    tallas:['Único'], colores:['#C2A26B','#C0C0C0'], stock:45, rating:4.8, orden:61, tag:'top ventas' },
+  { id:'b03', nombre:'Broche Flor Esmaltada', categoria:'Bijouterie', precio:10000,
+    img:U('1611591434086-543b0d87b407'), desc:'Broche de flor con esmalte de color. Detalle vintage para solapas.',
+    tallas:['Único'], colores:['#C98F8F','#EBD8D8','#C2A26B'], stock:38, rating:4.6, orden:62 },
+  { id:'b04', nombre:'Pulsera Dije Corazón', categoria:'Bijouterie', precio:12000, badge:'Nuevo',
+    img:U('1611652022419-a9419f74343d'), desc:'Pulsera fina con dije de corazón. Cadena ajustable.',
+    tallas:['Único'], colores:['#C2A26B','#C0C0C0','#EBD8D8'], stock:42, rating:4.7, orden:63 },
+  { id:'b05', nombre:'Cadena Capas Dorada', categoria:'Bijouterie', precio:15000,
+    img:U('1599643478518-a784e5dc4c8f'), desc:'Cadena de capas superpuestas. Efecto layering sin esfuerzo.',
+    tallas:['40cm','45cm'], colores:['#C2A26B'], stock:30, rating:4.8, orden:64, tag:'trending' },
+  { id:'b06', nombre:'Aros XXL Statement', categoria:'Bijouterie', precio:16000, badge:'Nuevo',
+    img:U('1635767798638-3e25273a8236'), desc:'Aros grandes tipo statement. Livianos, ideales para looks de noche.',
+    tallas:['Único'], colores:['#C2A26B','#C0C0C0'], stock:28, rating:4.6, orden:65 },
+  { id:'b07', nombre:'Set Aretes Cristal x3', categoria:'Bijouterie', precio:18000, badge:'Bestseller',
+    img:U('1515562141207-7a88fb7ce338'), desc:'Set x3 pares de aretes con cristales. Diferentes tamaños para combinar.',
+    tallas:['Único'], colores:['#FFFFFF','#EBD8D8'], stock:32, rating:4.9, orden:66, tag:'pack x3' },
+  { id:'b08', nombre:'Collar Perlas Faux', categoria:'Bijouterie', precio:20000,
+    img:U('1596944924616-7b38e7cfac36'), desc:'Collar de perlas falsas con cierre dorado. Elegancia atemporal.',
+    tallas:['40cm'], colores:['#FFFFFF','#EBD8D8'], stock:26, rating:4.8, orden:67 },
 
   /* ============ COSMÉTICOS ============ */
   { id:'c01', nombre:'Sérum Vitamina C', categoria:'Cosméticos', precio:180000, badge:'Bestseller',
-    img:UNSPLASH('1620916566398-39f1143ab7be'),
-    desc:'Sérum concentrado al 15% de vitamina C. 30 ml.',
+    img:U('1620916566398-39f1143ab7be'), desc:'Sérum concentrado al 15% de vitamina C. 30 ml.',
     tallas:[], colores:[], stock:22, rating:4.9, orden:10 },
   { id:'c02', nombre:'Labial Mate Rouge', categoria:'Cosméticos', precio:110000, badge:'Nuevo',
-    img:UNSPLASH('1586495777744-4413f21062fa'),
-    desc:'Labial de larga duración con acabado mate aterciopelado.',
+    img:U('1586495777744-4413f21062fa'), desc:'Labial de larga duración con acabado mate aterciopelado.',
     tallas:[], colores:['#A83B34','#C98F8F','#8B5A6B','#4A2B3D'], stock:35, rating:4.7, orden:11 },
   { id:'c03', nombre:'Bruma Agua de Rosa', categoria:'Cosméticos', precio:130000,
-    img:UNSPLASH('1571781926291-c477ebfd024b'),
-    desc:'Bruma facial refrescante con agua de rosa damascena.',
+    img:U('1571781926291-c477ebfd024b'), desc:'Bruma facial refrescante con agua de rosa damascena.',
     tallas:[], colores:[], stock:28, rating:4.8, orden:12 },
   { id:'c04', nombre:'Paleta Sombras Nude', categoria:'Cosméticos', precio:240000, precioAntes:320000, badge:'Oferta',
-    img:UNSPLASH('1512496015851-a90fb38ba796'),
-    desc:'12 tonos neutros altamente pigmentados.',
-    tallas:[], colores:[], stock:11, rating:4.6, orden:13 },
-  { id:'c05', nombre:'Crema Botánica Nocturna', categoria:'Cosméticos', precio:170000,
-    img:UNSPLASH('1556228720-195a672e8a03'),
-    desc:'Crema de noche con ácido hialurónico y té verde.',
-    tallas:[], colores:[], stock:19, rating:4.9, orden:14 }
+    img:U('1512496015851-a90fb38ba796'), desc:'12 tonos neutros altamente pigmentados.',
+    tallas:[], colores:[], stock:11, rating:4.6, orden:13 }
 ];
 
-/* ---------- ESTADO ---------- */
+/* Estado */
 let productos = [];
 let carrito   = LS.get('cart', []);
 let favoritos = LS.get('favs', []);
@@ -1139,7 +1162,6 @@ let orden     = 'relevancia';
 let productoActual = null;
 let selTalla = null, selColor = null, selCant = 1;
 
-/* ---------- CARGA DESDE FIREBASE ---------- */
 async function cargarProductos() {
   if (firebaseListo) {
     try {
@@ -1149,7 +1171,7 @@ async function cargarProductos() {
         const val = snap.val();
         productos = Object.entries(val).map(([k, v]) => ({ id: k, ...v }));
         productos.sort((a, b) => (a.orden ?? 999) - (b.orden ?? 999));
-        renderCatalogo(); renderCosmeticos(); renderImportados();
+        renderAll();
         console.info(`[Freya Bella] ${productos.length} productos cargados desde Firebase.`);
         return;
       }
@@ -1158,20 +1180,23 @@ async function cargarProductos() {
   const local = LS.get('productos', null);
   productos = local && local.length ? local : structuredClone(PRODUCTOS_DEMO);
   if (!local) LS.set('productos', productos);
+  renderAll();
+}
+
+function renderAll() {
   renderCatalogo();
   renderCosmeticos();
   renderImportados();
+  renderEconomicos();
 }
 
-/* ---------- RENDER CATÁLOGO ---------- */
-const CATEGORIAS = ['Todos', 'Ropa', 'Boutique', 'Importados', 'Cosméticos', 'Accesorios'];
+/* ============ CATÁLOGO ============ */
+const CATEGORIAS = ['Todos','Ropa','Boutique','Importados','Medias','Bijouterie','Cosméticos','Accesorios'];
 
 function renderChips() {
-  const cont = $('#chips');
-  cont.innerHTML = CATEGORIAS.map(cat => {
+  $('#chips').innerHTML = CATEGORIAS.map(cat => {
     const n = cat === 'Todos' ? productos.length : productos.filter(p => p.categoria === cat).length;
-    return `<button class="chip ${filtro === cat ? 'active' : ''}" data-cat="${cat}">
-      ${cat}<span class="n">${n}</span></button>`;
+    return `<button class="chip ${filtro === cat ? 'active' : ''}" data-cat="${cat}">${cat}<span class="n">${n}</span></button>`;
   }).join('');
 }
 $('#chips').addEventListener('click', e => {
@@ -1215,9 +1240,8 @@ function cardHTML(p) {
   const esFav = favoritos.includes(p.id);
   const img = p.img || placeholder(p.nombre, p.categoria);
   const ph  = placeholder(p.nombre, p.categoria);
-  const isImport = p.categoria === 'Importados';
   return `
-  <article class="card ${isImport ? 'import-card-inline' : ''}" data-id="${p.id}">
+  <article class="card" data-id="${p.id}">
     <div class="card-media">
       ${p.badge ? `<span class="${badgeClass(p.badge)}">${p.badge}</span>` : ''}
       <button class="fav ${esFav ? 'active' : ''}" data-fav="${p.id}" aria-label="Favorito">
@@ -1229,7 +1253,7 @@ function cardHTML(p) {
       <div class="card-overlay">
         <button class="ov-btn" data-quick="${p.id}">Vista rápida</button>
         <button class="ov-btn" data-add="${p.id}">Añadir</button>
-        <button class="ov-btn wa" data-wa="${p.id}" aria-label="Pedir por WhatsApp">
+        <button class="ov-btn wa" data-wa="${p.id}" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
         </button>
       </div>
@@ -1251,12 +1275,11 @@ function cardHTML(p) {
 function renderCatalogo() {
   renderChips();
   const list = productosFiltrados();
-  const grid = $('#grid');
   $('#resultsInfo').innerHTML = list.length
     ? `Mostrando <b>${list.length}</b> ${list.length === 1 ? 'producto' : 'productos'}${filtro !== 'Todos' ? ` en <b>${filtro}</b>` : ''}${busqueda ? ` para "<b>${busqueda}</b>"` : ''}`
     : '';
   if (!list.length) {
-    grid.innerHTML = `
+    $('#grid').innerHTML = `
       <div class="empty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
         <h3>Sin resultados</h3>
@@ -1264,17 +1287,16 @@ function renderCatalogo() {
       </div>`;
     return;
   }
-  grid.innerHTML = list.map((p, i) =>
-    cardHTML(p).replace('class="card"', `class="card" style="animation-delay:${Math.min(i * 45, 400)}ms"`)
+  $('#grid').innerHTML = list.map((p, i) =>
+    cardHTML(p).replace('class="card"', `class="card" style="animation-delay:${Math.min(i * 40, 400)}ms"`)
   ).join('');
 }
 
-/* ---------- RENDER IMPORTADOS (sección propia) ---------- */
+/* ============ IMPORTADOS ============ */
 function renderImportados() {
   const list = productos.filter(p => p.categoria === 'Importados');
   const cont = $('#importGrid');
   if (!list.length) { cont.innerHTML = ''; return; }
-
   cont.innerHTML = list.map((p, i) => {
     const off = p.precioAntes ? Math.round((1 - p.precio / p.precioAntes) * 100) : 0;
     const img = p.img || placeholder(p.nombre, p.categoria);
@@ -1286,9 +1308,7 @@ function renderImportados() {
         <span class="import-badge">🇺🇸 IMPORT</span>
         ${p.tag ? `<span class="import-tag ${tagClass}">${p.tag}</span>` : ''}
         <button class="fav ${favoritos.includes(p.id) ? 'active' : ''}" data-fav="${p.id}" aria-label="Favorito">
-          <svg viewBox="0 0 24 24" fill="${favoritos.includes(p.id) ? 'currentColor' : 'none'}" stroke="currentColor">
-            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 000-7.8z"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="${favoritos.includes(p.id) ? 'currentColor' : 'none'}" stroke="currentColor"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 000-7.8z"/></svg>
         </button>
         <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
         <div class="card-overlay">
@@ -1314,7 +1334,61 @@ function renderImportados() {
   }).join('');
 }
 
-/* ---------- RENDER COSMÉTICOS ---------- */
+/* ============ ECONÓMICOS (Medias + Bijouterie + Ropa barata) ============ */
+function renderEconomicos() {
+  // Filtra: ropa ≤ 60K + todas las medias + toda la bijouterie
+  const list = productos.filter(p =>
+    p.categoria === 'Medias' ||
+    p.categoria === 'Bijouterie' ||
+    (p.categoria === 'Ropa' && p.precio <= 60000) ||
+    (p.categoria === 'Importados' && p.precio <= 60000)
+  ).sort((a, b) => a.precio - b.precio);
+
+  const cont = $('#ecoGrid');
+  if (!list.length) { cont.innerHTML = ''; return; }
+
+  const badgePorCat = {
+    'Medias': '🧦 MEDIAS',
+    'Bijouterie': '💎 BIJOU',
+    'Ropa': '👕 ROPA',
+    'Importados': '🇺🇸 USA'
+  };
+
+  cont.innerHTML = list.map((p, i) => {
+    const off = p.precioAntes ? Math.round((1 - p.precio / p.precioAntes) * 100) : 0;
+    const img = p.img || placeholder(p.nombre, p.categoria);
+    const ph  = placeholder(p.nombre, p.categoria);
+    return `
+    <article class="eco-card" data-id="${p.id}" style="animation-delay:${Math.min(i * 50, 400)}ms">
+      <div class="card-media">
+        <span class="eco-badge-tag">${badgePorCat[p.categoria] || p.categoria}</span>
+        <span class="eco-price-tag">${money(p.precio)}</span>
+        <button class="fav ${favoritos.includes(p.id) ? 'active' : ''}" data-fav="${p.id}" aria-label="Favorito">
+          <svg viewBox="0 0 24 24" fill="${favoritos.includes(p.id) ? 'currentColor' : 'none'}" stroke="currentColor"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 000-7.8z"/></svg>
+        </button>
+        <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
+        <div class="card-overlay">
+          <button class="ov-btn" data-quick="${p.id}">Vista rápida</button>
+          <button class="ov-btn" data-add="${p.id}">Añadir</button>
+          <button class="ov-btn wa" data-wa="${p.id}" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">${p.categoria}</span>
+        <h3>${p.nombre}</h3>
+        <p class="card-desc">${p.desc || ''}</p>
+        <div class="price">
+          <span class="now">${money(p.precio)}</span>
+          ${p.precioAntes ? `<s>${money(p.precioAntes)}</s><span class="off">-${off}%</span>` : ''}
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+/* ============ COSMÉTICOS ============ */
 function renderCosmeticos() {
   const list = productos.filter(p => p.categoria === 'Cosméticos');
   const cont = $('#cosmoGrid');
@@ -1327,9 +1401,7 @@ function renderCosmeticos() {
       <div class="card-media">
         ${p.badge ? `<span class="${badgeClass(p.badge)}">${p.badge}</span>` : ''}
         <button class="fav ${favoritos.includes(p.id) ? 'active' : ''}" data-fav="${p.id}" aria-label="Favorito">
-          <svg viewBox="0 0 24 24" fill="${favoritos.includes(p.id) ? 'currentColor' : 'none'}" stroke="currentColor">
-            <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 000-7.8z"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="${favoritos.includes(p.id) ? 'currentColor' : 'none'}" stroke="currentColor"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 000-7.8z"/></svg>
         </button>
         <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
         <div class="card-overlay">
@@ -1353,7 +1425,7 @@ function renderCosmeticos() {
   }).join('');
 }
 
-/* ---------- EVENTOS DE TARJETAS ---------- */
+/* ============ EVENTOS ============ */
 document.addEventListener('click', e => {
   const fav = e.target.closest('[data-fav]');
   if (fav) { toggleFav(fav.dataset.fav); return; }
@@ -1370,12 +1442,10 @@ function toggleFav(id) {
   if (i > -1) { favoritos.splice(i, 1); toast('Eliminado de favoritos'); }
   else        { favoritos.push(id);    toast('Añadido a favoritos ♥'); }
   LS.set('favs', favoritos);
-  renderCatalogo();
-  renderCosmeticos();
-  renderImportados();
+  renderAll();
 }
 
-/* ---------- CARRITO ---------- */
+/* ============ CARRITO ============ */
 function guardarCarrito() { LS.set('cart', carrito); actualizarUI(); }
 
 function añadirAlCarrito(prod, { talla = null, color = null, cant = 1 } = {}) {
@@ -1516,7 +1586,6 @@ $('#overlay').addEventListener('click', () => {
   cerrarModal('#productModal');
   cerrarModal('#adminModal');
 });
-
 $('#cartBody').addEventListener('click', e => {
   const plus  = e.target.closest('[data-plus]');
   const minus = e.target.closest('[data-minus]');
@@ -1525,7 +1594,6 @@ $('#cartBody').addEventListener('click', e => {
   if (minus) cambiarCant(minus.dataset.minus, -1);
   if (rem)   eliminarItem(rem.dataset.remove);
 });
-
 $('#btnClearCart').addEventListener('click', () => {
   if (!carrito.length) return;
   carrito = [];
@@ -1533,7 +1601,7 @@ $('#btnClearCart').addEventListener('click', () => {
   toast('Bolsa vaciada');
 });
 
-/* ---------- VISTA RÁPIDA ---------- */
+/* ============ VISTA RÁPIDA ============ */
 function abrirProducto(id) {
   const p = productos.find(x => x.id === id);
   if (!p) return;
@@ -1550,6 +1618,7 @@ function renderProducto() {
   const off = p.precioAntes ? Math.round((1 - p.precio / p.precioAntes) * 100) : 0;
   const rating = p.rating || 5;
   const stars = '★'.repeat(Math.round(rating)) + '☆'.repeat(5 - Math.round(rating));
+  const tagCat = p.categoria === 'Importados' ? '🇺🇸 Importado USA' : p.categoria;
 
   $('#pvContent').innerHTML = `
     <div class="pv-media">
@@ -1557,7 +1626,7 @@ function renderProducto() {
            data-ph="${placeholder(p.nombre, p.categoria)}" alt="${p.nombre}">
     </div>
     <div class="pv-info">
-      <span class="card-cat">${p.categoria === 'Importados' ? '🇺🇸 Importado USA' : p.categoria}</span>
+      <span class="card-cat">${tagCat}</span>
       <h2>${p.nombre}</h2>
       <div class="pv-rating">
         <span class="stars">${stars}</span>
@@ -1634,14 +1703,13 @@ function renderProducto() {
     abrirCarrito();
   });
   $('#pvWa').addEventListener('click', () => {
-    const esImp = p.categoria === 'Importados';
     const msg =
-`${esImp ? '🇺🇸' : '🛍️'} *CONSULTA — ${CONFIG.marca.toUpperCase()}*
+`🛍️ *CONSULTA — ${CONFIG.marca.toUpperCase()}*
 
 ¡Hola! Me interesa este producto:
 
 📦 *${p.nombre}*
-🏷️ Categoría: ${p.categoria}${esImp ? ' (importado USA)' : ''}
+🏷️ Categoría: ${p.categoria}
 ${selTalla ? `📏 Talla: ${selTalla}\n` : ''}🔢 Cantidad: ${selCant}
 💰 Precio: ${money(p.precio)}
 
@@ -1650,21 +1718,19 @@ ${selTalla ? `📏 Talla: ${selTalla}\n` : ''}🔢 Cantidad: ${selCant}
   });
 }
 
-/* ---------- WHATSAPP ---------- */
+/* ============ WHATSAPP ============ */
 function abrirWhatsApp(mensaje) {
-  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, '_blank', 'noopener');
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
 }
 
 function pedirDirecto(id) {
   const p = productos.find(x => x.id === id);
   if (!p) return;
-  const esImp = p.categoria === 'Importados';
   const msg =
-`${esImp ? '🇺🇸' : '🛍️'} *PEDIDO DIRECTO — ${CONFIG.marca.toUpperCase()}*
+`🛍️ *PEDIDO DIRECTO — ${CONFIG.marca.toUpperCase()}*
 
 📦 Producto: *${p.nombre}*
-🏷️ Categoría: ${p.categoria}${esImp ? ' (importado USA)' : ''}
+🏷️ Categoría: ${p.categoria}
 💰 Precio: ${money(p.precio)}
 ${p.tallas?.length ? `📏 Tallas disponibles: ${p.tallas.join(', ')}\n` : ''}
 ¿Me confirmas disponibilidad y tiempo de entrega? ¡Gracias!`;
@@ -1712,25 +1778,23 @@ $('#btnCheckout').addEventListener('click', async () => {
     try {
       const { ref, push, serverTimestamp } = fbFns;
       await push(ref(fbDB, 'pedidos'), {
-        items: carrito,
-        totales: calcularTotales(),
-        estado: 'pendiente',
-        creado: serverTimestamp()
+        items: carrito, totales: calcularTotales(),
+        estado: 'pendiente', creado: serverTimestamp()
       });
     } catch (e) { console.warn('No se pudo guardar el pedido en Firebase:', e); }
   }
   abrirWhatsApp(construirMensajePedido());
 });
 
-/* ---------- Links WhatsApp generales ---------- */
 const WA_GENERAL = `¡Hola ${CONFIG.marca}! 👋 Vi su tienda online y me gustaría recibir más información.`;
 $('#waFloat').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(WA_GENERAL)}`;
 $('#waFooter').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(WA_GENERAL)}`;
 $('#waFooterIcon').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(WA_GENERAL)}`;
 $('#waCosmo').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent('¡Hola Freya Bella! ✨ Quisiera asesoría sobre la línea de cosméticos.')}`;
 $('#waImport').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent('¡Hola Freya Bella! 🇺🇸 Quiero ver el catálogo completo de ropa importada de USA. ¿Me lo pueden enviar?')}`;
+$('#waEco').href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent('¡Hola Freya Bella! 💕 Quiero ver los combos económicos de medias, bijouterie y básicos. ¿Me comparten precios al por mayor?')}`;
 
-/* ---------- MODALES ---------- */
+/* ============ MODALES ============ */
 function abrirModal(sel) {
   $(sel).classList.add('show');
   $('#overlay').classList.add('show');
@@ -1755,20 +1819,18 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* ---------- PANEL ADMIN ---------- */
+/* ============ PANEL ADMIN ============ */
 $('#btnAdmin').addEventListener('click', () => {
   const pass = prompt('🔒 Contraseña del panel:');
   if (pass === null) return;
   if (pass !== CONFIG.adminPass) { toast('Contraseña incorrecta'); return; }
   abrirModal('#adminModal');
 });
-
 $('#fileDrop').addEventListener('click', () => $('#pImagen').click());
 $('#pImagen').addEventListener('change', e => {
   const f = e.target.files[0];
   if (f) $('#fileLabel').textContent = `📎 ${f.name}`;
 });
-
 $('#btnSeed').addEventListener('click', async () => {
   if (!confirm('¿Restaurar el catálogo de demostración?')) return;
   productos = structuredClone(PRODUCTOS_DEMO);
@@ -1782,27 +1844,23 @@ $('#btnSeed').addEventListener('click', async () => {
       toast('Catálogo subido a Firebase');
     } catch (e) { console.warn(e); }
   }
-  renderCatalogo(); renderCosmeticos(); renderImportados();
+  renderAll();
   setStatus('Catálogo demo restaurado ✅', 'ok');
 });
-
 function setStatus(txt, tipo = 'info') {
   const el = $('#adminStatus');
   el.textContent = txt;
   el.className = 'status-msg show ' + tipo;
   if (tipo !== 'info') setTimeout(() => el.classList.remove('show'), 4500);
 }
-
 $('#adminForm').addEventListener('submit', async e => {
   e.preventDefault();
   setStatus('Procesando…', 'info');
-
   const file   = $('#pImagen').files[0];
   const urlIn  = $('#pImagenUrl').value.trim();
   const nombre = $('#pNombre').value.trim();
   const cat    = $('#pCategoria').value;
   let imgUrl = urlIn || '';
-
   if (file && firebaseListo) {
     try {
       const { ref, uploadBytes, getDownloadURL } = fbFns;
@@ -1813,7 +1871,7 @@ $('#adminForm').addEventListener('submit', async e => {
       imgUrl = await getDownloadURL(sRef);
     } catch (err) {
       console.error(err);
-      setStatus('⚠️ No se pudo subir la imagen. Se usará marcador.', 'err');
+      setStatus('⚠️ No se pudo subir la imagen.', 'err');
     }
   } else if (file && !firebaseListo) {
     imgUrl = await new Promise(res => {
@@ -1822,10 +1880,8 @@ $('#adminForm').addEventListener('submit', async e => {
       r.readAsDataURL(file);
     });
   }
-
   const nuevo = {
-    id: uid(),
-    nombre, categoria: cat,
+    id: uid(), nombre, categoria: cat,
     precio: parseInt($('#pPrecio').value) || 0,
     precioAntes: parseInt($('#pPrecioAntes').value) || null,
     desc: $('#pDesc').value.trim(),
@@ -1833,11 +1889,9 @@ $('#adminForm').addEventListener('submit', async e => {
     colores: [],
     stock: parseInt($('#pStock').value) || 0,
     badge: $('#pBadge').value || null,
-    rating: 5,
-    orden: Date.now(),
+    rating: 5, orden: Date.now(),
     img: imgUrl || placeholder(nombre, cat)
   };
-
   if (firebaseListo) {
     try {
       const { ref, set } = fbFns;
@@ -1851,29 +1905,22 @@ $('#adminForm').addEventListener('submit', async e => {
   } else {
     setStatus('✅ Guardado localmente (modo demo).', 'ok');
   }
-
   productos.unshift(nuevo);
   LS.set('productos', productos);
-  renderCatalogo(); renderCosmeticos(); renderImportados();
+  renderAll();
   e.target.reset();
   $('#fileLabel').textContent = 'Arrastra una imagen o haz clic para subirla';
   toast('Producto publicado ✨');
   setTimeout(() => cerrarModal('#adminModal'), 1200);
 });
 
-/* ---------- BÚSQUEDA / ORDEN / NEWSLETTER / HEADER ---------- */
+/* ============ BÚSQUEDA / HEADER ============ */
 let searchTimer;
 $('#searchInput').addEventListener('input', e => {
   clearTimeout(searchTimer);
-  searchTimer = setTimeout(() => {
-    busqueda = e.target.value;
-    renderCatalogo();
-  }, 200);
+  searchTimer = setTimeout(() => { busqueda = e.target.value; renderCatalogo(); }, 200);
 });
-$('#sortSelect').addEventListener('change', e => {
-  orden = e.target.value;
-  renderCatalogo();
-});
+$('#sortSelect').addEventListener('change', e => { orden = e.target.value; renderCatalogo(); });
 $('#btnSearch').addEventListener('click', () => {
   document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
   setTimeout(() => $('#searchInput').focus(), 500);
@@ -1887,12 +1934,12 @@ window.addEventListener('scroll', () => {
   $('#header').classList.toggle('scrolled', window.scrollY > 12);
 }, { passive: true });
 $('#btnBurger').addEventListener('click', () => {
-  const dest = prompt('Ir a:\n1) Catálogo\n2) Importados USA\n3) Cosméticos\n4) Contacto\n\nEscribe el número');
-  const map = { '1': '#catalogo', '2': '#importados', '3': '#cosmeticos', '4': '#contacto' };
+  const dest = prompt('Ir a:\n1) Catálogo\n2) Económicos\n3) Importados USA\n4) Cosméticos\n5) Contacto\n\nEscribe el número');
+  const map = { '1': '#catalogo', '2': '#economicos', '3': '#importados', '4': '#cosmeticos', '5': '#contacto' };
   if (map[dest]) document.querySelector(map[dest]).scrollIntoView({ behavior: 'smooth' });
 });
 
-/* ---------- TOASTS ---------- */
+/* ============ TOASTS ============ */
 function toast(txt) {
   const el = document.createElement('div');
   el.className = 'toast';
@@ -1904,30 +1951,11 @@ function toast(txt) {
   }, 2400);
 }
 
-/* ---------- HERO MOSAIC ---------- */
-function pintarHero() {
-  const imgs = $$('#heroMosaic img');
-  const fuentes = [
-    UNSPLASH('1595777457583-95e059d581b8'),
-    UNSPLASH('1556821840-3a63f95609a7'),
-    UNSPLASH('1620916566398-39f1143ab7be')
-  ];
-  const cats = ['Ropa', 'Importados', 'Cosméticos'];
-  const nombres = ['Vestido Aurora', 'Hoodie Oversize', 'Sérum Vitamina C'];
-  imgs.forEach((img, i) => {
-    img.src = fuentes[i];
-    img.dataset.ph = placeholder(nombres[i], cats[i]);
-  });
-}
-
-/* ---------- ARRANQUE ---------- */
+/* ============ ARRANQUE ============ */
 (async function init() {
-  pintarHero();
   actualizarUI();
   productos = LS.get('productos', null) || structuredClone(PRODUCTOS_DEMO);
-  renderCatalogo();
-  renderCosmeticos();
-  renderImportados();
+  renderAll();
   const ok = await initFirebase();
   if (ok) await cargarProductos();
   console.log(
