@@ -54,53 +54,14 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 ::-webkit-scrollbar-thumb{background:#D6C9C0;border-radius:10px;border:2px solid var(--bg-alt)}
 ::-webkit-scrollbar-thumb:hover{background:var(--plum-soft)}
 
-/* TOPBAR — CORREGIDO */
-.topbar{
-  background:var(--plum-deep);
-  color:#EADFE4;
-  font-size:.74rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  padding:10px 0;
-  text-align:center;
-  font-weight:400;
-  position:relative;
-  z-index:60;
-  overflow:hidden;
-}
-.topbar .track{
-  display:flex;
-  gap:20px;
-  justify-content:flex-start;
-  flex-wrap:nowrap;
-  overflow-x:auto;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-  padding:0 20px;
-  -webkit-overflow-scrolling:touch;
-}
+/* TOPBAR */
+.topbar{background:var(--plum-deep);color:#EADFE4;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:10px 0;text-align:center;font-weight:400;position:relative;z-index:60;overflow:hidden}
+.topbar .track{display:flex;gap:20px;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:0 20px;-webkit-overflow-scrolling:touch}
 .topbar .track::-webkit-scrollbar{display:none}
-.topbar span{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  white-space:nowrap;
-  flex-shrink:0;
-}
-.topbar .dot{
-  width:4px;
-  height:4px;
-  background:var(--gold);
-  border-radius:50%;
-  display:inline-block;
-  flex-shrink:0;
-}
+.topbar span{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0}
+.topbar .dot{width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block;flex-shrink:0}
 @media (min-width:768px){
-  .topbar .track{
-    justify-content:center;
-    gap:60px;
-    overflow-x:visible;
-  }
+  .topbar .track{justify-content:center;gap:60px;overflow-x:visible}
 }
 
 /* HEADER */
@@ -385,20 +346,24 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .free-ship{font-size:.74rem;background:var(--gold-soft);color:#7A6435;padding:10px 14px;border-radius:var(--radius-sm);text-align:center;letter-spacing:.03em;margin-bottom:14px}
 .free-ship.done{background:#DDF3E5;color:#1E7A45}
 
-/* MODAL */
+/* MODAL — PATCH: sin overflow horizontal */
 .modal{position:fixed;inset:0;z-index:110;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:all .4s var(--ease);overflow-y:auto}
 .modal.show{opacity:1;visibility:visible}
-.modal-card{background:var(--bg);border-radius:26px;width:100%;max-width:960px;max-height:92vh;overflow-y:auto;position:relative;box-shadow:var(--shadow-lg);transform:scale(.94) translateY(18px);transition:transform .45s var(--ease)}
+.modal-card{background:var(--bg);border-radius:26px;width:100%;max-width:960px;max-height:92vh;overflow-y:auto;overflow-x:hidden;position:relative;box-shadow:var(--shadow-lg);transform:scale(.94) translateY(18px);transition:transform .45s var(--ease);box-sizing:border-box}
 .modal.show .modal-card{transform:none}
 .modal-close{position:absolute;top:16px;right:16px;z-index:5;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);display:grid;place-items:center;color:var(--ink);transition:all .3s var(--ease);box-shadow:var(--shadow-xs)}
 .modal-close:hover{background:var(--plum);color:#fff;transform:rotate(90deg)}
 .modal-close svg{width:19px;height:19px;stroke-width:1.6}
-.pv-grid{display:grid;grid-template-columns:1fr 1fr}
+
+/* PV GRID — PATCH: minmax(0,1fr) evita que el contenido empuje */
+.pv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:100%}
 .pv-media{background:var(--bg-alt);position:relative;overflow:hidden;min-height:420px}
 .pv-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.pv-info{padding:clamp(26px,4vw,44px)}
+
+/* PV INFO — PATCH: min-width:0 + break-word */
+.pv-info{padding:clamp(22px,4vw,44px);min-width:0;max-width:100%;overflow-wrap:break-word}
 .pv-info .card-cat{margin-bottom:9px}
-.pv-info h2{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.pv-info h2{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px;overflow-wrap:break-word}
 .pv-rating{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);margin-bottom:18px}
 .pv-rating .stars{color:var(--gold);letter-spacing:2px;font-size:.9rem}
 .pv-price{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap}
@@ -415,8 +380,15 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .opt.color-opt{display:inline-flex;align-items:center;gap:8px;padding:8px 16px 8px 10px}
 .opt.color-opt .dot{width:15px;height:15px;border-radius:50%;border:1.5px solid rgba(0,0,0,.08)}
 .opt.color-opt.active .dot{border-color:rgba(255,255,255,.5)}
-.pv-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}
-.pv-actions .btn{flex:1;min-width:150px}
+
+/* PV ACTIONS — PATCH: flex-wrap y apilado hasta 900px */
+.pv-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px;width:100%}
+.pv-actions .btn{flex:1 1 200px;min-width:0;max-width:100%;white-space:normal;text-align:center;line-height:1.25;padding:15px 22px}
+@media(max-width:900px){
+  .pv-actions{flex-direction:column;gap:10px}
+  .pv-actions .btn{flex:0 0 auto;width:100%;min-width:0;font-size:.76rem;padding:15px 22px}
+}
+
 .pv-meta{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:9px;font-size:.79rem;color:var(--muted)}
 .pv-meta div{display:flex;align-items:center;gap:9px}
 .pv-meta svg{width:15px;height:15px;color:var(--gold);stroke-width:1.6}
@@ -461,7 +433,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 @keyframes toastIn{from{opacity:0;transform:translateY(22px) scale(.94)}to{opacity:1;transform:none}}
 @keyframes toastOut{to{opacity:0;transform:translateY(16px) scale(.96)}}
 
-/* TOUCH DEVICES: mostrar fav siempre y ocultar overlay de botones */
+/* TOUCH DEVICES */
 @media(hover:none){
   .card-overlay{display:none}
   .fav{opacity:1;transform:none}
@@ -482,7 +454,8 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .hero-bottom-inner{justify-content:center;text-align:center}
   .hero-stats{justify-content:center}
   .hero-scroll{display:none}
-  .pv-grid{grid-template-columns:1fr}
+  /* PATCH: grid modal en una columna con minmax */
+  .pv-grid{grid-template-columns:minmax(0,1fr)}
   .pv-media{min-height:0;height:44vh;max-height:380px;aspect-ratio:auto}
   .news-inner{grid-template-columns:1fr;gap:28px}
   .news-form{flex-direction:column}
@@ -520,7 +493,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .wa-float{width:52px;height:52px;bottom:18px;right:18px}
   .wa-float svg{width:25px;height:25px}
 
-  /* MODAL: pantalla completa adaptable en móvil */
+  /* MODAL a pantalla completa en móvil */
   .modal{padding:0;align-items:stretch}
   .modal-card{
     border-radius:0;
@@ -530,7 +503,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
     max-height:100vh;
     min-height:100vh;
   }
-  .pv-grid{grid-template-columns:1fr;min-height:100%}
+  .pv-grid{grid-template-columns:minmax(0,1fr);min-height:100%}
   .pv-media{
     min-height:0;
     height:38vh;
@@ -539,17 +512,18 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
     position:relative;
   }
   .pv-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .pv-info{padding:22px 20px 32px}
-  .pv-info h2{font-size:1.35rem;line-height:1.2;margin-bottom:8px}
-  .pv-rating{margin-bottom:14px;font-size:.74rem}
+  .pv-info{padding:22px 20px 32px;min-width:0;max-width:100%;overflow-wrap:break-word}
+  .pv-info h2{font-size:1.35rem;line-height:1.2;margin-bottom:8px;overflow-wrap:break-word}
+  .pv-rating{margin-bottom:14px;font-size:.74rem;flex-wrap:wrap}
   .pv-price{margin-bottom:16px;gap:9px}
   .pv-price .now{font-size:1.4rem}
   .pv-price s{font-size:.82rem}
   .pv-desc{font-size:.85rem;line-height:1.7;margin-bottom:18px}
   .opt-group{margin-bottom:16px}
   .opt{padding:8px 14px;font-size:.75rem;min-width:40px}
-  .pv-actions{flex-direction:column;gap:9px;margin-top:20px}
-  .pv-actions .btn{width:100%;min-width:0;padding:14px 20px;font-size:.74rem}
+  /* PATCH: forzar apilado en móvil */
+  .pv-actions{flex-direction:column;gap:9px;margin-top:20px;width:100%}
+  .pv-actions .btn{width:100%;min-width:0;flex:0 0 auto;padding:14px 20px;font-size:.74rem;white-space:normal;text-align:center;line-height:1.25}
   .pv-meta{margin-top:18px;padding-top:16px;font-size:.75rem}
   .modal-close{top:12px;right:12px;width:38px;height:38px}
   .modal-close svg{width:17px;height:17px}
@@ -1103,7 +1077,7 @@ document.addEventListener('error', e => {
   el.src = el.dataset.ph || placeholder('FB', 'Ropa');
 }, true);
 
-/* ============ CATÁLOGO DEMO COMPLETO ============ */
+/* ============ CATÁLOGO DEMO ============ */
 const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=80`;
 const PRODUCTOS_DEMO = [
   { id:'p01', nombre:'Vestido Aurora', categoria:'Ropa', precio:350000, precioAntes:450000, badge:'Oferta',
@@ -1306,7 +1280,6 @@ function badgeClass(b) {
   return 'badge';
 }
 
-/* ============ TARJETAS (sin "Vista rápida") ============ */
 function cardHTML(p) {
   const off = p.precioAntes ? Math.round((1 - p.precio / p.precioAntes) * 100) : 0;
   const esFav = favoritos.includes(p.id);
@@ -1489,18 +1462,14 @@ function renderCosmeticos() {
   }).join('');
 }
 
-/* ============ EVENTOS DE CLIC ============ */
 document.addEventListener('click', e => {
-  // 1) Botones específicos (favorito, añadir, WhatsApp) tienen prioridad
   const fav = e.target.closest('[data-fav]');
   if (fav) { toggleFav(fav.dataset.fav); return; }
   const add = e.target.closest('[data-add]');
   if (add) { añadirRapido(add.dataset.add); return; }
   const wa = e.target.closest('[data-wa]');
   if (wa) { pedirDirecto(wa.dataset.wa); return; }
-  // 2) Si el clic fue en cualquier otro botón, no abrir el modal
   if (e.target.closest('button')) return;
-  // 3) Toda la tarjeta es táctil: abrir detalle del producto
   const card = e.target.closest('[data-id]');
   if (card) abrirProducto(card.dataset.id);
 });
