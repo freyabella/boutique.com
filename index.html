@@ -209,7 +209,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .results-info{font-size:.78rem;color:var(--muted);letter-spacing:.06em;margin-bottom:22px}
 .results-info b{color:var(--ink);font-weight:500}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:clamp(18px,2.4vw,30px)}
-.card{background:var(--surface);border-radius:var(--radius);overflow:hidden;position:relative;border:1px solid rgba(234,225,218,.7);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;animation:fadeUp .55s var(--ease) both}
+.card{background:var(--surface);border-radius:var(--radius);overflow:hidden;position:relative;border:1px solid rgba(234,225,218,.7);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;animation:fadeUp .55s var(--ease) both;cursor:pointer}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:transparent}
 .card-media{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt)}
@@ -259,7 +259,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .import-flag-badge{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--usa-blue) 0%,var(--usa-blue-dark) 60%,var(--usa-red) 160%);color:#fff;padding:7px 18px;border-radius:100px;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;box-shadow:0 10px 24px -12px rgba(60,90,153,.7);margin-bottom:14px}
 .import-flag-badge svg{width:14px;height:14px}
 .import-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
-.import-card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(60,90,153,.14);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;position:relative;animation:fadeUp .55s var(--ease) both}
+.import-card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(60,90,153,.14);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;position:relative;animation:fadeUp .55s var(--ease) both;cursor:pointer}
 .import-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(60,90,153,.55);border-color:rgba(60,90,153,.35)}
 .import-card .card-media{aspect-ratio:3/4;background:#F0F3F9}
 .import-badge{position:absolute;top:14px;left:14px;z-index:3;padding:6px 12px;border-radius:8px;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:linear-gradient(135deg,var(--usa-blue),var(--usa-red));color:#fff;box-shadow:0 6px 14px -6px rgba(60,90,153,.8)}
@@ -290,7 +290,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .eco-badge{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--rose) 0%,#B06A6A 100%);color:#fff;padding:7px 18px;border-radius:100px;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;box-shadow:0 10px 24px -12px rgba(201,143,143,.8);margin-bottom:14px}
 .eco-badge svg{width:14px;height:14px}
 .eco-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
-.eco-card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(201,143,143,.16);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;position:relative;animation:fadeUp .55s var(--ease) both}
+.eco-card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(201,143,143,.16);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;position:relative;animation:fadeUp .55s var(--ease) both;cursor:pointer}
 .eco-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(201,143,143,.6);border-color:rgba(201,143,143,.4)}
 .eco-card .card-media{aspect-ratio:3/4;background:#FDF6F0}
 .eco-badge-tag{position:absolute;top:14px;left:14px;z-index:3;padding:6px 12px;border-radius:8px;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:linear-gradient(135deg,var(--rose),#A85C5C);color:#fff;box-shadow:0 6px 14px -6px rgba(201,143,143,.9)}
@@ -311,7 +311,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 .cosmetics .section-head h2{color:#fff}
 .cosmetics .section-head p{color:#C7B4BE}
 .cosmo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
-.cosmo-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);overflow:hidden;backdrop-filter:blur(10px);transition:all .5s var(--ease);position:relative}
+.cosmo-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);overflow:hidden;backdrop-filter:blur(10px);transition:all .5s var(--ease);position:relative;cursor:pointer}
 .cosmo-card:hover{background:rgba(255,255,255,.10);border-color:rgba(194,162,107,.45);transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
 .cosmo-card .card-media{aspect-ratio:1/1;background:rgba(0,0,0,.2)}
 .cosmo-card .card-body{padding:20px}
@@ -461,6 +461,12 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
 @keyframes toastIn{from{opacity:0;transform:translateY(22px) scale(.94)}to{opacity:1;transform:none}}
 @keyframes toastOut{to{opacity:0;transform:translateY(16px) scale(.96)}}
 
+/* TOUCH DEVICES: mostrar fav siempre y ocultar overlay de botones */
+@media(hover:none){
+  .card-overlay{display:none}
+  .fav{opacity:1;transform:none}
+}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .nav{display:none}
@@ -477,7 +483,7 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .hero-stats{justify-content:center}
   .hero-scroll{display:none}
   .pv-grid{grid-template-columns:1fr}
-  .pv-media{min-height:300px;aspect-ratio:4/3}
+  .pv-media{min-height:0;height:44vh;max-height:380px;aspect-ratio:auto}
   .news-inner{grid-template-columns:1fr;gap:28px}
   .news-form{flex-direction:column}
   .news-form .btn{width:100%}
@@ -513,8 +519,40 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;
   .form-grid{grid-template-columns:1fr}
   .wa-float{width:52px;height:52px;bottom:18px;right:18px}
   .wa-float svg{width:25px;height:25px}
-  .modal{padding:0}
-  .modal-card{border-radius:0;max-height:100vh;min-height:100vh}
+
+  /* MODAL: pantalla completa adaptable en móvil */
+  .modal{padding:0;align-items:stretch}
+  .modal-card{
+    border-radius:0;
+    width:100%;
+    max-width:100%;
+    height:100vh;
+    max-height:100vh;
+    min-height:100vh;
+  }
+  .pv-grid{grid-template-columns:1fr;min-height:100%}
+  .pv-media{
+    min-height:0;
+    height:38vh;
+    max-height:340px;
+    aspect-ratio:auto;
+    position:relative;
+  }
+  .pv-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .pv-info{padding:22px 20px 32px}
+  .pv-info h2{font-size:1.35rem;line-height:1.2;margin-bottom:8px}
+  .pv-rating{margin-bottom:14px;font-size:.74rem}
+  .pv-price{margin-bottom:16px;gap:9px}
+  .pv-price .now{font-size:1.4rem}
+  .pv-price s{font-size:.82rem}
+  .pv-desc{font-size:.85rem;line-height:1.7;margin-bottom:18px}
+  .opt-group{margin-bottom:16px}
+  .opt{padding:8px 14px;font-size:.75rem;min-width:40px}
+  .pv-actions{flex-direction:column;gap:9px;margin-top:20px}
+  .pv-actions .btn{width:100%;min-width:0;padding:14px 20px;font-size:.74rem}
+  .pv-meta{margin-top:18px;padding-top:16px;font-size:.75rem}
+  .modal-close{top:12px;right:12px;width:38px;height:38px}
+  .modal-close svg{width:17px;height:17px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
@@ -1268,6 +1306,7 @@ function badgeClass(b) {
   return 'badge';
 }
 
+/* ============ TARJETAS (sin "Vista rápida") ============ */
 function cardHTML(p) {
   const off = p.precioAntes ? Math.round((1 - p.precio / p.precioAntes) * 100) : 0;
   const esFav = favoritos.includes(p.id);
@@ -1284,8 +1323,7 @@ function cardHTML(p) {
       </button>
       <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
       <div class="card-overlay">
-        <button class="ov-btn" data-quick="${p.id}">Vista rápida</button>
-        <button class="ov-btn" data-add="${p.id}">Añadir</button>
+        <button class="ov-btn" data-add="${p.id}">Añadir a la bolsa</button>
         <button class="ov-btn wa" data-wa="${p.id}" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
         </button>
@@ -1344,8 +1382,7 @@ function renderImportados() {
         </button>
         <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
         <div class="card-overlay">
-          <button class="ov-btn" data-quick="${p.id}">Vista rápida</button>
-          <button class="ov-btn" data-add="${p.id}">Añadir</button>
+          <button class="ov-btn" data-add="${p.id}">Añadir a la bolsa</button>
           <button class="ov-btn wa" data-wa="${p.id}" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
           </button>
@@ -1398,8 +1435,7 @@ function renderEconomicos() {
         </button>
         <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
         <div class="card-overlay">
-          <button class="ov-btn" data-quick="${p.id}">Vista rápida</button>
-          <button class="ov-btn" data-add="${p.id}">Añadir</button>
+          <button class="ov-btn" data-add="${p.id}">Añadir a la bolsa</button>
           <button class="ov-btn wa" data-wa="${p.id}" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
           </button>
@@ -1434,8 +1470,7 @@ function renderCosmeticos() {
         </button>
         <img src="${img}" data-ph="${ph}" alt="${p.nombre}" loading="lazy">
         <div class="card-overlay">
-          <button class="ov-btn" data-quick="${p.id}">Vista rápida</button>
-          <button class="ov-btn" data-add="${p.id}">Añadir</button>
+          <button class="ov-btn" data-add="${p.id}">Añadir a la bolsa</button>
           <button class="ov-btn wa" data-wa="${p.id}" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
           </button>
@@ -1454,15 +1489,20 @@ function renderCosmeticos() {
   }).join('');
 }
 
+/* ============ EVENTOS DE CLIC ============ */
 document.addEventListener('click', e => {
+  // 1) Botones específicos (favorito, añadir, WhatsApp) tienen prioridad
   const fav = e.target.closest('[data-fav]');
   if (fav) { toggleFav(fav.dataset.fav); return; }
-  const quick = e.target.closest('[data-quick]');
-  if (quick) { abrirProducto(quick.dataset.quick); return; }
   const add = e.target.closest('[data-add]');
   if (add) { añadirRapido(add.dataset.add); return; }
   const wa = e.target.closest('[data-wa]');
   if (wa) { pedirDirecto(wa.dataset.wa); return; }
+  // 2) Si el clic fue en cualquier otro botón, no abrir el modal
+  if (e.target.closest('button')) return;
+  // 3) Toda la tarjeta es táctil: abrir detalle del producto
+  const card = e.target.closest('[data-id]');
+  if (card) abrirProducto(card.dataset.id);
 });
 
 function toggleFav(id) {
